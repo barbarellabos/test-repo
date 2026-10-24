@@ -16,15 +16,16 @@ def setup_scene(preview=True, bg="creme", frames=(1, 30)):
     # "Standard" : les hex de la marque sortent tels quels (AgX les delave)
     s.view_settings.view_transform = "Standard"
     s.view_settings.look = "None"
+    bgc = config.color(bg) if isinstance(bg, str) else bg
     world = bpy.data.worlds.new("JL_world")
     s.world = world
     world.use_nodes = True
     # Fond visible a la camera, mais quasi pas d'eclairage ambiant (sinon le toon est plat)
     nt = world.node_tree
     bg_node = nt.nodes["Background"]
-    bg_node.inputs[0].default_value = config.color(bg)
+    bg_node.inputs[0].default_value = bgc
     amb = nt.nodes.new("ShaderNodeBackground")
-    amb.inputs[0].default_value = config.color(bg)
+    amb.inputs[0].default_value = bgc
     amb.inputs[1].default_value = 0.15
     path = nt.nodes.new("ShaderNodeLightPath")
     mix = nt.nodes.new("ShaderNodeMixShader")

@@ -22,6 +22,18 @@ PALETTE = {
     "creme":        "#FFF4E0",  # fond
 }
 
+# Couleurs de la mascotte Jacqueline (proposition v01)
+CHAR = {
+    "pelage":       "#FFFDF8",  # blanc tres legerement chaud
+    "pelage_ombre": "#B8CBEA",  # ombre bleutee (validee : ombres bleues)
+    "truffe":       "#1E2235",  # noir bleute, pas noir pur
+    "bouche":       "#7A2335",
+    "langue":       "#F0727F",  # rose du dessin
+    "reflet":       "#FFFFFF",
+}
+
+NEUTRE = "#D9DDE5"  # fond gris neutre pour turnarounds et tests techniques
+
 FPS = 30
 RES_FINAL = (1080, 1920)
 RES_PREVIEW = (540, 960)
@@ -41,4 +53,4 @@ def hex_to_linear(hex_str, alpha=1.0):
 
 
 def color(name, alpha=1.0):
-    return hex_to_linear(PALETTE[name], alpha)
+    return hex_to_linear(PALETTE.get(name) or CHAR.get(name) or name, alpha)

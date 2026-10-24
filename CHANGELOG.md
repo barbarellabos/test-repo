@@ -8,3 +8,10 @@
 - Bugs corrigés : (1) toon tout plat, cause : le fond du monde éclairait la scène à 100 %, d'où un éclairage ambiant découplé du fond visible ; (2) personnage entièrement dans l'ombre, cause : la coque de contour projetait son ombre sur le corps.
 - Bloqué : accès réseau aux sites d'assets (Sketchfab, Poly Pizza, Quaternius, Kenney, NIH 3D) refusé par la politique réseau de l'environnement.
 - En attente de validation : palette v01 (config.py), questions vidéo 1, choix de la voie pour le chien.
+
+## 2026-10-24 : Phase 2, mascotte Jacqueline (construction en code, d'après le dessin de la fondatrice)
+- Décision : pas d'image-to-3D (pose couchée inutilisable pour l'animation, Hugging Face bloqué). Chien modélisé en metaballs (characters/build_jacqueline.py), debout, d'après characters/ref_jacqueline_dessin.jpg (dessin de la fondatrice, droits à elle).
+- Validé par la fondatrice : ombres bleutées sur le pelage blanc ; ce chien est la mascotte.
+- v01 à v04 : tête ronde, oreilles tombantes collées à la tête, queue en panache, yeux avec reflets, truffe, sourcils, trait de lèvre en "w", bouche ouverte et langue.
+- Bug corrigé : reflets des yeux et de la truffe invisibles. Cause : les détails du visage étaient posés par rayon sur la coque du contour (normale inversée), donc enfoncés dans la tête. Les contours sont maintenant ajoutés en dernier.
+- En attente : retours sur la v04 ; puis rig quadrupède et 3 expressions.
