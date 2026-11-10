@@ -215,7 +215,7 @@ Frise verticale en 3 étapes :
 - Livraison et retours : texte de livraison venant du réglage commun (section 3).
 - Comment marche l'abonnement ? : réduction **calculée**, « livraison offerte, modifiable et annulable en 1 clic » (section 6, point 4).
 - Moyens de paiement : « Carte, PayPal ou Apple Pay, paiement sécurisé. »
-- À partir de quel âge ? : **réponse à reprendre du site actuel.**
+- À partir de quel âge ? : « Dès 3 mois. »
 
 Utilise `<details>` / `<summary>` et ajoute le **balisage FAQPage** (schema.org) pour le référencement.
 
@@ -271,7 +271,7 @@ Utilise `<details>` / `<summary>` et ajoute le **balisage FAQPage** (schema.org)
 3. **Avis clients (article L111-7-2 du Code de la consommation) :** indique si les avis sont vérifiés et comment, avec un lien « Comment nous vérifions les avis » ou la mention Trustpilot. Aucun avis inventé, même en attendant.
 4. **Abonnement :** depuis juin 2023, la résiliation en ligne doit se faire en 3 clics maximum. Vérifie que l'app d'abonnement le permet avant d'afficher « annulable en 1 clic ».
 5. **Droit de rétractation de 14 jours :** il doit être visible dans les CGV, accessibles depuis la page.
-6. **Droit à l'image :** les personnes reconnaissables sur `event-corgi.webp` doivent avoir donné leur accord écrit. Demande confirmation à Dora avant de mettre en ligne.
+6. **Droit à l'image :** `event-corgi.webp`, c'est réglé : les deux personnes du stand sont les fondatrices. Pour toute nouvelle photo avec des personnes reconnaissables, demande d'abord à Dora si l'accord écrit existe.
 7. **Mesure d'audience** (Microsoft Clarity, Meta Pixel) : rien ne se déclenche avant le **consentement** donné dans le bandeau cookies.
 
 ---
@@ -283,7 +283,6 @@ Tout texte entre `[...]` dans la maquette est un trou. Pour chacun, **masque l'�
 - photos et légendes d'événements (nom, ville, date) ;
 - vidéo, citation et nom de l'ostéopathe ;
 - 3e avis Trustpilot avec photo du chien ;
-- réponse à « À partir de quel âge ? » ;
 - questions 2 et 3 du quiz ;
 - liste datée des 50+ événements, pour le lien de preuve ;
 - **prix et offres définitifs** (section 3).
