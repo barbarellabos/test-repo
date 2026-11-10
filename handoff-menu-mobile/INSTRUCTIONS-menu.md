@@ -75,7 +75,14 @@ Deux boutons pilule côte à côte, blancs, bordure de 2,5 px, ombre `3px 4px #1
 **Disposition :**
 - **L'en-tête reste visible et cliquable** au-dessus du voile (logo, FR/EN, croix).
 - Voile : `rgba(40, 40, 40, .55)` sur toute la page sous l'en-tête.
-- Bulle : à 12 px des bords gauche et droit, 12 px sous l'en-tête. Fond crème `#FBF9F2`, bordure de 2,5 px en `#111`, arrondi de 22 px, ombre dure `5px 6px #111`, marges intérieures de 16 px.
+- **L'en-tête du menu ouvert est exactement celui de la nouvelle page produit** : même bandeau, en-tête de 91 px avec le logo de 85 px de haut, FR/EN, icône panier, puis le bouton menu. Ne crée pas un en-tête différent pour le menu.
+- **La bulle est accrochée à la croix.** Quand le menu s'ouvre :
+  - le bouton burger devient une croix et perd sa bordure du bas (arrondi seulement en haut, `12px 12px 0 0`) ;
+  - il se prolonge vers le bas, à la même largeur et avec les mêmes bordures latérales de 2,5 px, jusqu'à la bulle ;
+  - la croix et la bulle forment ainsi **un seul objet**, comme un onglet ;
+  - la bulle commence juste sous l'en-tête, son coin haut droit n'est pas arrondi (`border-radius: 22px 0 22px 22px`) et son bord droit est aligné avec celui de la croix ;
+  - voir `maquette/menu-mobile.dc.html`, élément « Raccord ».
+- Bulle : à 12 px des bords gauche et droit. Fond crème `#FBF9F2`, bordure de 2,5 px en `#111`, ombre dure `5px 6px #111`, marges intérieures de 16 px.
 - **La bulle ne prend pas toute la page.** Si l'écran est trop petit, c'est la bulle qui défile (`max-height` avec `overflow-y: auto`), pas la page.
 
 **Comportement :**
@@ -115,6 +122,7 @@ Rien ne se déclenche avant le consentement cookies.
 
 - [ ] Ordre : Mon compte / Mon panier → La gamme (3 cartes) → Faire le quiz.
 - [ ] La bulle ne couvre pas toute la page, le voile gris est visible autour, l'en-tête reste au-dessus.
+- [ ] En-tête identique à celui de la page produit ; la bulle est raccordée à la croix sans trait entre les deux.
 - [ ] Fermeture par la croix, le voile ou Échap. Défilement de la page bloqué quand le menu est ouvert.
 - [ ] Compteur du panier exact, masqué à 0.
 - [ ] Produits issus d'un menu ou d'une collection Shopify, pas écrits en dur.
