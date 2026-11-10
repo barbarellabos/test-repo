@@ -222,8 +222,8 @@ Utilise `<details>` / `<summary>` et ajoute le **balisage FAQPage** (schema.org)
 ### 4.17 Zéro image IA. Que des vrais chiens. (défilé latéral, fond jaune pâle)
 - Sous-titre « Ils goûtent leurs chews, en vrai, sur nos stands. »
 - Compteur « 1 / 3 » **qui se met à jour** pendant le défilement, + « Glisse → ».
-- 3 cartes de 250 × 330 px, dans cet ordre : `chien-bouvier.webp`, `chien-dalmatien.webp`, `chien-epagneul.webp`.
-- Légendes : « [Prénom] · bouvier bernois », etc. **Prénoms à fournir.**
+- 3 cartes **photo seule** de 250 × 397 px, dans cet ordre : `chien-bouvier.webp`, `chien-dalmatien.webp`, `chien-epagneul.webp`.
+- **Pas de légende ni de prénom** : la photo occupe toute la carte. Garde un `alt` descriptif pour l'accessibilité (voir la maquette).
 
 ### 4.18 Quiz (fond cobalt, tout en bas)
 - « PAS SÛR QUE CE SOIT LE BON CHOIX POUR TON CHIEN ? » + « 3 questions, et on t'envoie vers le complément qu'il lui faut. »
@@ -231,9 +231,8 @@ Utilise `<details>` / `<summary>` et ajoute le **balisage FAQPage** (schema.org)
   - « Ses articulations, il ralentit » → Mobilité
   - « Son ventre, sa digestion » → Digestion
   - « Sa forme au quotidien » → Multivitamines
-- **Les questions 2 et 3 ne sont pas écrites** : demande-les à Dora.
-- Le résultat renvoie vers la page produit concernée, avec la tranche de poids en paramètre d'URL pour la présélectionner.
-- Si le site a déjà un quiz ou une app de quiz, **réutilise-le**.
+- **Le site a déjà un quiz en place : réutilise-le**, ne le recode pas. Repère-le dans le thème (section, app ou page dédiée) et intègre-le ici, en gardant le titre et le sous-titre de la maquette au-dessus.
+- Si le quiz existant ne permet pas d'afficher la première question en ligne, mets un bouton « Faire le quiz » qui y mène, et préviens Dora.
 
 ---
 
@@ -279,11 +278,9 @@ Utilise `<details>` / `<summary>` et ajoute le **balisage FAQPage** (schema.org)
 ## 7. Contenus manquants : ne rien mettre en ligne avec un crochet
 
 Tout texte entre `[...]` dans la maquette est un trou. Pour chacun, **masque l'élément** tant qu'il est vide (réglage de section vide = bloc caché) et donne la liste à Dora :
-- prénoms des chiens (bloc 4.17) ;
 - photos et légendes d'événements (nom, ville, date) ;
 - vidéo, citation et nom de l'ostéopathe ;
 - 3e avis Trustpilot avec photo du chien ;
-- questions 2 et 3 du quiz ;
 - liste datée des 50+ événements, pour le lien de preuve ;
 - **prix et offres définitifs** (section 3).
 
