@@ -1,0 +1,656 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>V2 · texte 18 / 16</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;700;900&amp;family=Outfit:wght@400;500;600;700&amp;family=Permanent+Marker&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:inherit;text-decoration:none}
+summary{list-style:none;cursor:pointer}
+summary::-webkit-details-marker{display:none}
+button{font-family:inherit;color:inherit;cursor:pointer}
+</style>
+</helmet>
+<div style="width:390px;background:#FBF9F2;font-family:'Outfit',sans-serif;color:#111;box-sizing:border-box">
+
+
+  <!-- Bandeau 1 ligne -->
+  <div style="height:32px;background:#2525DC;color:#FBF9F2;display:flex;align-items:center;justify-content:center;font-family:'League Spartan',sans-serif;font-weight:700;font-size:16px;letter-spacing:.06em;text-transform:uppercase">
+    <sc-if value="{{bf}}" hint-placeholder-val="{{ true }}"><span>BLACK FRIDAY ·&nbsp; 3E SACHET OFFERT DÈS 2</span></sc-if>
+    <sc-if value="{{noBf}}" hint-placeholder-val="{{ false }}"><span>Satisfait ou remboursé 60 jours</span></sc-if>
+  </div>
+
+  <!-- Header -->
+  <div style="height: 91px; display: flex; align-items: center; justify-content: space-between; padding: 0 12px 0 16px; box-sizing: border-box; border-bottom: 2px solid #111; padding-left: 0px">
+    <img src="/_blob/8ada92a0e5c8340ea0afa06a5e8c102f" alt="Jacqueline's Lab" style="height: 85px; width: 159px; display: block; object-fit: cover; object-position: 47.039% 50.3688%; object-view-box: inset(9.0073% 7.223% 8.8754% 6.4154%)">
+    <div style="display:flex;align-items:center;gap:6px">
+      <div style="display:flex;border:2px solid #111;border-radius:999px;overflow:hidden;height:40px">
+        <a href="#" aria-label="Français" style="width:44px;display:flex;align-items:center;justify-content:center;background:#2525DC;color:#FBF9F2;font-family:'League Spartan',sans-serif;font-weight:900;font-size:16px">FR</a>
+        <a href="#" aria-label="English" style="width:44px;display:flex;align-items:center;justify-content:center;font-family:'League Spartan',sans-serif;font-weight:900;font-size:16px">EN</a>
+      </div>
+      <a href="#" aria-label="Panier, 0 article" style="width:44px;height:44px;display:flex;align-items:center;justify-content:center">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 4h2l2.5 11h10l2-8H7"></path><circle cx="9" cy="19" r="1.5"></circle><circle cx="17" cy="19" r="1.5"></circle></svg>
+      </a>
+      <a href="#" aria-label="Menu" style="width:44px;height:44px;display:flex;align-items:center;justify-content:center;border:2px solid #111;border-radius:12px;box-sizing:border-box">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"></path></svg>
+      </a>
+    </div>
+  </div>
+
+  <!-- 1 · Photo -->
+  <div style="position: relative; width: 390px; height: 357px; background: #2525DC">
+    <img src="/_blob/727a86a64d5db523589315de06c0fcc2" alt="Teckel qui prend un soft chew devant trois sachets Mobilité" style="width: 390px; height: 357px; object-fit: cover; object-position: 50% 64%; display: block">
+    <div style="position:absolute;left:0;right:0;bottom:12px;display:flex;justify-content:center;gap:7px">
+      <span style="width:22px;height:8px;border-radius:99px;background:#FBF9F2;border:1.5px solid #111"></span>
+      <span style="width:8px;height:8px;border-radius:99px;background:#FBF9F2;opacity:.55"></span>
+      <span style="width:8px;height:8px;border-radius:99px;background:#FBF9F2;opacity:.55"></span>
+      <span style="width:8px;height:8px;border-radius:99px;background:#FBF9F2;opacity:.55"></span>
+      <span style="width:8px;height:8px;border-radius:99px;background:#FBF9F2;opacity:.55"></span>
+    </div>
+  </div>
+
+  <!-- 2 · Note -->
+  <div style="display:flex;align-items:center;gap:8px;padding:12px 16px 0">
+    <svg width="96" height="18" viewBox="0 0 96 18" role="img" aria-label="4,8 sur 5">
+      <g fill="#00B67A"><rect width="18" height="18"></rect><rect x="19.5" width="18" height="18"></rect><rect x="39" width="18" height="18"></rect><rect x="58.5" width="18" height="18"></rect><rect x="78" width="18" height="18"></rect></g>
+      <g fill="#FBF9F2"><path d="M9 3l1.6 4.2h4.4l-3.6 2.6 1.4 4.2L9 11.4 5.2 14l1.4-4.2L3 7.2h4.4z"></path><path transform="translate(19.5 0)" d="M9 3l1.6 4.2h4.4l-3.6 2.6 1.4 4.2L9 11.4 5.2 14l1.4-4.2L3 7.2h4.4z"></path><path transform="translate(39 0)" d="M9 3l1.6 4.2h4.4l-3.6 2.6 1.4 4.2L9 11.4 5.2 14l1.4-4.2L3 7.2h4.4z"></path><path transform="translate(58.5 0)" d="M9 3l1.6 4.2h4.4l-3.6 2.6 1.4 4.2L9 11.4 5.2 14l1.4-4.2L3 7.2h4.4z"></path><path transform="translate(78 0)" d="M9 3l1.6 4.2h4.4l-3.6 2.6 1.4 4.2L9 11.4 5.2 14l1.4-4.2L3 7.2h4.4z"></path></g>
+    </svg>
+    <span style="font-size:18px;font-weight:700">4,8/5 · Trustpilot</span>
+  </div>
+
+  <!-- 3 · Nom gamme -->
+  <div style="padding: 10px 16px 0; height: 74px">
+    
+    <h1 style="margin:2px 0 0;font-family:'League Spartan',sans-serif;font-weight:900;font-size:42px;line-height:1.02;color:#2525DC;text-transform:uppercase">Mobilité</h1><h2 style="margin: 0; font-family: 'League Spartan',sans-serif; font-weight: 900; font-size: 24px; line-height: 1.1; color: #2525DC; text-transform: uppercase; margin-top: 0px">Choisissez votre formule</h2>
+    
+  </div>
+
+  <!-- 4 · 60 soft chews / 1 à 3 par jour -->
+  
+
+  <!-- 5 · Bienfaits clefs -->
+  <div id="offre" style="padding-bottom: 24px; height: 181px">
+<div style="padding: 0 16px; box-sizing: border-box">
+    
+    
+
+    <!-- Poids : une seule ligne -->
+    
+    
+    
+
+    <!-- 2 options : rien de présélectionné ; un clic ouvre la bulle (poids, prénom, acheter) -->
+    <div style="display:flex;flex-direction:column;gap:14px;margin-top:16px">
+      <div style="{{ aboStyle }}">
+        <button type="button" onClick="{{ pickAbo }}" style="display:block;width:100%;padding:0;margin:0;background:none;border:0;text-align:left;position:relative">
+        
+        <span style="display:flex;align-items:center;justify-content:space-between;width:100%">
+          <span style="display:flex;align-items:center;gap:10px">
+            <span style="width:22px;height:22px;border-radius:99px;border:2.5px solid #111;background:#fff;display:flex;align-items:center;justify-content:center;flex:none">
+              <span style="{{ aboDot }}"></span>
+            </span>
+            <span style="font-family:'League Spartan',sans-serif;font-weight:900;font-size:18px;white-space:nowrap;text-transform:uppercase">Abonnement</span>
+          </span>
+          <span style="display:flex;align-items:baseline;gap:6px">
+            <sc-if value="{{bf}}" hint-placeholder-val="{{ true }}"><span style="font-size:16px;white-space:nowrap;color:#4A4A4A;text-decoration:line-through">38,40 €</span></sc-if>
+            <span style="font-family:'League Spartan',sans-serif;font-weight:900;font-size:26px;white-space:nowrap">{{ aboPrice }} €</span>
+          </span>
+        </span>
+        <span style="display:flex;align-items:flex-end;justify-content:space-between;width:100%;margin-top:6px;gap:8px"><span style="display: block; font-size: 16px; line-height: 1.3; color: #3D3D3D; font-weight: 500">Livraison offerte ·&nbsp; sans engagement&nbsp;</span>
+          <span style="flex: none; padding: 2px 8px; background: #FBD9C7; border: 2px solid #111; border-radius: 8px; font-family: 'League Spartan',sans-serif; font-weight: 900; font-size: 16px">{{ aboTag }}</span>
+        </span>
+        
+      </button>
+        <sc-if value="{{aboOpen}}" hint-placeholder-val="{{ false }}">
+          <div style="margin-top:14px;padding-top:14px;border-top:2px dashed #111">
+            <div style="font-family:'League Spartan',sans-serif;font-weight:800;font-size:16px;letter-spacing:.07em;text-transform:uppercase">1 · Poids de votre chien</div>
+            <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-top:8px">
+              <sc-for list="{{pills}}" as="p" hint-placeholder-count="3">
+                <button type="button" onClick="{{ p.pick }}" style="{{ p.style }}">{{ p.label }}</button>
+              </sc-for>
+            </div>
+            <div style="margin-top:8px;font-size:18px;line-height:1.3;color:#3D3D3D">{{ weightInfo }}</div>
+            <label style="display:block;margin-top:16px;font-family:'League Spartan',sans-serif;font-weight:800;font-size:16px;letter-spacing:.07em;text-transform:uppercase">2 · Le prénom de votre chien
+              <input type="text" placeholder="Ex. Nestor" style="display:block;width:100%;box-sizing:border-box;height:50px;margin-top:8px;padding:0 14px;background:#fff;border:2.5px solid #111;border-radius:14px;font-family:'Outfit',sans-serif;font-size:18px;font-weight:500;text-transform:none;letter-spacing:0;color:#111">
+            </label>
+            <a href="#" style="{{ ctaStyle }}">{{ ctaLabel }}</a>
+            <p style="margin:12px 0 0;font-size:18px;line-height:1.35;font-weight:500">Cure de 3 mois recommandée, idéalement en continu.</p>
+            <div style="margin-top:8px;font-size:18px;font-weight:700">Satisfait ou remboursé</div>
+            <div style="margin-top:4px;font-size:16px;color:#3D3D3D;font-weight:500">Livraison point relais offerte dès 70 € · toujours offerte en abonnement</div>
+          </div>
+        </sc-if>
+      <span style="position: absolute; top: -12px; left: 28px; padding: 3px 10px; background: #E8501A; color: #111; border: 2px solid #111; border-radius: 999px; box-shadow: 2px 3px #111; font-family: 'League Spartan',sans-serif; font-weight: 800; font-size: 16px; letter-spacing: .06em; text-transform: uppercase; text-align: left">Recommandé</span></div>
+
+      <div style="{{ onceStyle }}">
+        <button type="button" onClick="{{ pickOnce }}" style="display:block;width:100%;padding:0;margin:0;background:none;border:0;text-align:left;position:relative">
+        <span style="display:flex;align-items:center;justify-content:space-between;width:100%">
+          <span style="display:flex;align-items:center;gap:10px">
+            <span style="width:22px;height:22px;border-radius:99px;border:2.5px solid #111;background:#fff;display:flex;align-items:center;justify-content:center;flex:none">
+              <span style="{{ onceDot }}"></span>
+            </span>
+            <span style="font-family:'League Spartan',sans-serif;font-weight:900;font-size:18px;white-space:nowrap;text-transform:uppercase">Achat unique</span>
+          </span>
+          <span style="display:flex;align-items:baseline;gap:6px">
+            <sc-if value="{{bf}}" hint-placeholder-val="{{ true }}"><span style="font-size:16px;white-space:nowrap;color:#4A4A4A;text-decoration:line-through">38,40 €</span></sc-if>
+            <span style="font-family:'League Spartan',sans-serif;font-weight:900;font-size:26px;white-space:nowrap">{{ oncePrice }} €</span>
+          </span>
+        </span>
+        <span style="display: flex; align-items: flex-end; width: 100%; margin-top: 6px; gap: 8px; flex-direction: row; text-align: right">
+          
+          <sc-if value="{{bf}}" hint-placeholder-val="{{ true }}"></sc-if>
+        </span>
+        
+      </button>
+        <sc-if value="{{onceOpen}}" hint-placeholder-val="{{ false }}">
+          <div style="margin-top:14px;padding-top:14px;border-top:2px dashed #111">
+            <div style="font-family:'League Spartan',sans-serif;font-weight:800;font-size:16px;letter-spacing:.07em;text-transform:uppercase">1 · Poids de votre chien</div>
+            <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-top:8px">
+              <sc-for list="{{pills}}" as="p" hint-placeholder-count="3">
+                <button type="button" onClick="{{ p.pick }}" style="{{ p.style }}">{{ p.label }}</button>
+              </sc-for>
+            </div>
+            <div style="margin-top:8px;font-size:18px;line-height:1.3;color:#3D3D3D">{{ weightInfo }}</div>
+            <label style="display:block;margin-top:16px;font-family:'League Spartan',sans-serif;font-weight:800;font-size:16px;letter-spacing:.07em;text-transform:uppercase">2 · Le prénom de votre chien
+              <input type="text" placeholder="Ex. Nestor" style="display:block;width:100%;box-sizing:border-box;height:50px;margin-top:8px;padding:0 14px;background:#fff;border:2.5px solid #111;border-radius:14px;font-family:'Outfit',sans-serif;font-size:18px;font-weight:500;text-transform:none;letter-spacing:0;color:#111">
+            </label>
+            <a href="#" style="{{ ctaStyle }}">{{ ctaLabel }}</a>
+            <p style="margin:12px 0 0;font-size:18px;line-height:1.35;font-weight:500">Cure de 3 mois recommandée, idéalement en continu.</p>
+            <div style="margin-top:8px;font-size:18px;font-weight:700">Satisfait ou remboursé</div>
+            <div style="margin-top:4px;font-size:16px;color:#3D3D3D;font-weight:500">Livraison point relais offerte dès 70 € · toujours offerte en abonnement</div>
+          </div>
+        </sc-if>
+      </div>
+    </div>
+
+    <!-- Une seule bulle signature -->
+    <div style="text-align:center;margin-top:28px">
+      
+    </div>
+  </div>
+
+  </div><div style="padding:20px 16px 0">
+    <div style="font-family: 'League Spartan',sans-serif; font-weight: 900; font-size: 20px; text-transform: uppercase; color: #2525dc">LES BIENFAITS CLEFS</div>
+    <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-top:12px">
+      <div style="display:flex;flex-direction:column;align-items:center;gap:6px;text-align:center">
+        <img src="/_blob/2dcc03d6737a5edc79bce6ebe3cf8496" alt="Articulation en mouvement" style="width:64px;height:64px;display:block">
+        <span style="font-family: 'League Spartan',sans-serif; font-weight: 900; font-size: 16px; line-height: 1.15; text-transform: uppercase; color: #2525dc">Souplesse articulaire</span>
+      </div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:6px;text-align:center">
+        <img src="/_blob/1f663b03b0898123b03fe44a24fa3aae" alt="Articulation et cartilage" style="width:64px;height:64px;display:block">
+        <span style="font-family: 'League Spartan',sans-serif; font-weight: 900; font-size: 16px; line-height: 1.15; text-transform: uppercase; color: #2525dc">RENFORCEMENT DU CARTILAGE</span>
+      </div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:6px;text-align:center">
+        <img src="/_blob/5c00758bbeac61dac63e068ff2edab2a" alt="Colonne et hanches" style="width:64px;height:64px;display:block">
+        <span style="font-family: 'League Spartan',sans-serif; font-weight: 900; font-size: 16px; line-height: 1.15; text-transform: uppercase; color: #2525dc">SOUTIEN DU DOS ET DES HANCHES</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 5 bis · On n'attend pas -->
+  <div style="padding:16px 16px 0">
+    <p style="margin:0;padding:14px 16px;background:#FBD9C7;border:2px solid #111;border-radius:14px;font-size:18px;line-height:1.35;font-weight:600">On n’attend pas qu’il ralentisse : on renforce ses articulations dès qu’il est jeune.</p>
+  </div>
+
+  <!-- 6 · Comme pour nous -->
+  <div style="margin:14px 16px 0;padding:12px 14px;background:#fff;border:2.5px solid #111;border-radius:16px;box-shadow:3px 4px #111">
+    <div style="display:flex;align-items:center;justify-content:space-between;gap:8px"><span style="font-family: &quot;League Spartan&quot;, sans-serif; font-weight: 900; font-size: 18px; text-transform: uppercase">60 SOFT CHEWS par sachet,&nbsp; &nbsp; &nbsp;<br><br>un RITUEL QUOTIDIEN:</span>
+      <span style="font-size: 18px; font-weight: 600"><br></span>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;margin-top:10px">
+      <div style="padding:6px 4px;border:2px solid #111;border-radius:10px;background:#FBD9C7;text-align:center"><div style="font-size:16px;font-weight:700">1-10 kg</div><div style="font-size:16px">1 / jour</div></div>
+      <div style="padding:6px 4px;border:2px solid #111;border-radius:10px;background:#FBD9C7;text-align:center"><div style="font-size:16px;font-weight:700">11-30 kg</div><div style="font-size:16px">2 / jour</div></div>
+      <div style="padding:6px 4px;border:2px solid #111;border-radius:10px;background:#FBD9C7;text-align:center"><div style="font-size:16px;font-weight:700">+30 kg</div><div style="font-size:16px">3 / jour</div></div>
+    </div>
+  </div>
+
+  <!-- 7-8 · Offre + ajout au panier -->
+  
+
+
+  <!-- 9 · Ils l'ont testé : défilé latéral -->
+  <div style="padding: 28px 0 28px; border-bottom: 2px solid #111; padding-left: 10px">
+    <div style="display:flex;align-items:flex-end;justify-content:space-between;padding:0 16px">
+      <h2 style="margin:0;font-family:'League Spartan',sans-serif;font-weight:900;font-size:26px;line-height:1.05;color:#2525DC;text-transform:uppercase">Ils l'ont testé.</h2>
+      <span style="font-size:16px;font-weight:700">Faites glisser →</span>
+    </div>
+    <div style="display: flex; gap: 12px; overflow-x: auto; scroll-snap-type: x mandatory; padding: 16px 16px 8px; scrollbar-width: none; padding-left: 25px">
+      <div style="flex: none; width: 290px; scroll-snap-align: start; padding: 16px; background: #fff; border: 2.5px solid #111; border-radius: 18px; box-shadow: 4px 5px #111; box-sizing: border-box; padding-left: 16px">
+        <div style="font-size:18px;font-weight:700;color:#00B67A">★★★★★ · Avis vérifié</div>
+        <p style="margin:10px 0 0;font-size:18px;line-height:1.4;font-weight:500">« Pas toujours facile de donner des comprimés à mes deux Bergers Picards de 30 kg. Ils ont mangé avec plaisir les Soft Chew Mobility. »</p>
+        <div style="margin-top:10px;font-size:16px;font-weight:600;color:#3D3D3D">Trustpilot · deux Bergers Picards</div>
+      </div>
+      <div style="flex:none;width:290px;scroll-snap-align:start;padding:16px;background:#fff;border:2.5px solid #111;border-radius:18px;box-shadow:4px 5px #111;box-sizing:border-box">
+        <div style="font-size:18px;font-weight:700;color:#00B67A">★★★★★ · 2 avril 2026</div>
+        <p style="margin:10px 0 0;font-size:18px;line-height:1.4;font-weight:500">« Excellent, enfin une marque à la hauteur. Nestor marche plus facilement !! »</p>
+        <div style="margin-top:10px;font-size:16px;font-weight:600;color:#3D3D3D">Trustpilot · Nestor</div>
+      </div>
+      <div style="flex:none;width:290px;scroll-snap-align:start;padding:16px;background:#FBF9F2;border:2.5px dashed #111;border-radius:18px;box-sizing:border-box;display:flex;flex-direction:column;justify-content:center;text-align:center">
+        <div style="font-size:18px;font-weight:700;text-transform:uppercase;letter-spacing:.05em">Avis à ajouter</div>
+        <div style="margin-top:6px;font-size:18px">Vrais avis Trustpilot, avec photo du chien si possible</div>
+      </div>
+    </div>
+    
+  </div>
+
+  <!-- 9 bis · Rejoindre les maîtres -->
+  <div style="padding:24px 16px 26px;background:#F9E7A8;border-bottom:2px solid #111">
+    <div style="font-family:'League Spartan',sans-serif;font-weight:900;font-size:24px;line-height:1.1;color:#2525DC;text-transform:uppercase">Faites partie des maîtres qui aident leur chien à bien vieillir.</div>
+    
+  </div>
+
+  <!-- 10 · Allie science et goût : défilé latéral -->
+  <div style="padding:28px 16px 30px;background:#2525DC;border-bottom:2px solid #111">
+    <h2 style="margin:0;font-family:'League Spartan',sans-serif;font-weight:900;font-size:26px;line-height:1.05;color:#FBF9F2;text-transform:uppercase">Les 3 compléments se combinent.</h2>
+    
+    <div style="display:flex;flex-direction:column;gap:12px;margin-top:16px">
+      <div style="display:flex;align-items:center;gap:12px;padding:10px;background:#FBF9F2;border:2.5px solid #111;border-radius:16px;box-shadow:4px 5px #111">
+        <img src="/_blob/c138e1917a0eadcbe3381c169fd93d89" alt="Sachet Digestion" style="width:84px;height:84px;object-fit:cover;border:2px solid #111;border-radius:12px;display:block;flex:none">
+        <div style="flex:1;min-width:0">
+          <div style="font-family:'League Spartan',sans-serif;font-weight:900;font-size:18px;text-transform:uppercase">Digestion</div>
+          <div style="font-size:16px;color:#3D3D3D">Pour un ventre en paix · 37,70 €</div>
+          <a href="#" style="font-size:16px;font-weight:700;text-decoration:underline">Voir la fiche</a>
+        </div>
+        <button type="button" aria-label="Ajouter Digestion au panier" style="flex:none;width:48px;height:48px;border-radius:99px;background:#1C7F3D;border:2.5px solid #111;box-shadow:2px 3px #111;display:flex;align-items:center;justify-content:center;padding:0">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FBF9F2" stroke-width="3" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg>
+        </button>
+      </div>
+      <div style="display:flex;align-items:center;gap:12px;padding:10px;background:#FBF9F2;border:2.5px solid #111;border-radius:16px;box-shadow:4px 5px #111">
+        <img src="/_blob/55c87ea4dd6f945d2b28ef983f3ab3f8" alt="Sachet Multivitamines" style="width:84px;height:84px;object-fit:cover;border:2px solid #111;border-radius:12px;display:block;flex:none">
+        <div style="flex:1;min-width:0">
+          <div style="font-family:'League Spartan',sans-serif;font-weight:900;font-size:18px;text-transform:uppercase">Multivitamines</div>
+          <div style="font-size:16px;color:#3D3D3D">Soutien 360° · 35,90 €</div>
+          <a href="#" style="font-size:16px;font-weight:700;text-decoration:underline">Voir la fiche</a>
+        </div>
+        <button type="button" aria-label="Ajouter Multivitamines au panier" style="flex:none;width:48px;height:48px;border-radius:99px;background:#F5D14E;border:2.5px solid #111;box-shadow:2px 3px #111;display:flex;align-items:center;justify-content:center;padding:0">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="3" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg>
+        </button>
+      </div>
+    </div>
+    
+  </div><!-- 10 bis · Mobilité ou Multivitamines ? (dépliable : fermé par défaut) -->
+  <div style="padding:24px 16px 26px;border-bottom:2px solid #111">
+    <button type="button" onClick="{{ cmpToggle }}" aria-expanded="{{ cmpExp }}" style="display:flex;align-items:center;justify-content:space-between;gap:12px;width:100%;padding:16px;background:#fff;border:2.5px solid #111;border-radius:16px;box-shadow:3px 4px #111;text-align:left">
+      <span>
+        <span style="display:block;font-family:'League Spartan',sans-serif;font-weight:900;font-size:24px;line-height:1.05;color:#2525DC;text-transform:uppercase">Mobilité ou Multivitamines ?</span>
+        <span style="display:block;margin-top:6px;font-size:16px;font-weight:600;text-decoration:underline">{{ cmpLabel }}</span>
+      </span>
+      <span style="{{ cmpChevron }}"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></span>
+    </button>
+    <sc-if value="{{ cmpOpen }}" hint-placeholder-val="{{ false }}">
+    <p style="margin:16px 0 0;font-size:18px;line-height:1.35;font-weight:500">Même posologie, deux besoins différents.</p>
+    <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:16px">
+      <div style="padding:12px;background:#FBD9C7;border:2.5px solid #111;border-radius:16px;box-shadow:3px 4px #111">
+        <img src="/_blob/8038681d5d6870c426152fc19f4453d5" alt="Sachet Mobilité" style="width:44px;height:66px;object-fit:contain;display:block">
+        <div style="margin-top:6px;font-family:'League Spartan',sans-serif;font-weight:900;font-size:20px;text-transform:uppercase">Mobilité</div>
+        <div style="margin-top:2px;font-size:16px;font-weight:700;color:#C4400F">L’expert articulations</div>
+        <div style="margin-top:6px;font-size:16px;line-height:1.3">2× plus de glucosamine et de MSM. Dès le plus jeune âge, avant les premiers signes.</div>
+      </div>
+      <div style="padding:12px;background:#F9E7A8;border:2.5px solid #111;border-radius:16px;box-shadow:3px 4px #111">
+        <img src="/_blob/83816a7f6547cd8ea432929aff61844b" alt="Sachet Multivitamines" style="width:44px;height:66px;object-fit:contain;display:block">
+        <div style="margin-top:6px;font-family:'League Spartan',sans-serif;font-weight:900;font-size:20px;text-transform:uppercase">Multivitamines</div>
+        <div style="margin-top:2px;font-size:16px;font-weight:700;color:#8A6A00">Le soutien 360°</div>
+        <div style="margin-top:6px;font-size:16px;line-height:1.3">Moins ciblé, plus complet : articulations, défenses, digestion, pelage.</div>
+      </div>
+    </div>
+
+    <div style="margin-top:20px;padding:4px 14px 6px;background:#fff;border:2.5px solid #111;border-radius:16px;box-shadow:3px 4px #111">
+      <div style="display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr) minmax(0,1fr);gap:6px;padding:10px 0 8px;font-size:16px;font-weight:800;align-items:end">
+        <span>Par soft chew</span><span style="text-align:center;color:#C4400F">Mobilité</span><span style="text-align:center;color:#8A6A00">Multi</span>
+      </div>
+      <div style="padding:4px 0 2px;font-size:16px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#3D3D3D">Articulations</div>
+        <div style="display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr) minmax(0,1fr);gap:6px;padding:10px 0;border-top:1px solid #E6E2D6;font-size:16px;align-items:center">
+          <span style="font-weight:600">Glucosamine</span><span style="text-align:center"><b style="color:#C4400F">200 mg</b></span><span style="text-align:center">100 mg</span>
+        </div>
+        <div style="display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr) minmax(0,1fr);gap:6px;padding:10px 0;border-top:1px solid #E6E2D6;font-size:16px;align-items:center">
+          <span style="font-weight:600">MSM</span><span style="text-align:center"><b style="color:#C4400F">200 mg</b></span><span style="text-align:center">100 mg</span>
+        </div>
+        <div style="display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr) minmax(0,1fr);gap:6px;padding:10px 0;border-top:1px solid #E6E2D6;font-size:16px;align-items:center">
+          <span style="font-weight:600">Collagène bovin</span><span style="text-align:center">100 mg</span><span style="text-align:center">100 mg</span>
+        </div>
+        <div style="display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr) minmax(0,1fr);gap:6px;padding:10px 0;border-top:1px solid #E6E2D6;font-size:16px;align-items:center">
+          <span style="font-weight:600">Chondroïtine</span><span style="text-align:center">35 mg</span><span style="text-align:center">30 mg</span>
+        </div>
+        <div style="display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr) minmax(0,1fr);gap:6px;padding:10px 0;border-top:1px solid #E6E2D6;font-size:16px;align-items:center">
+          <span style="font-weight:600">Moule verte</span><span style="text-align:center">—</span><span style="text-align:center">100 mg</span>
+        </div>
+      <div style="padding:14px 0 2px;border-top:2px solid #111;font-size:16px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#3D3D3D">En plus dans Multi</div>
+        <div style="display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr) minmax(0,1fr);gap:6px;padding:10px 0;border-top:1px solid #E6E2D6;font-size:16px;align-items:center">
+          <span><b>Défenses naturelles</b><br><span style="color:#3D3D3D">parois de levure, probiotiques</span></span><span style="text-align:center;color:#6B6458">—</span><span style="text-align:center;color:#1C7F3D;font-weight:800;font-size:20px" aria-label="oui">✓</span>
+        </div>
+        <div style="display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr) minmax(0,1fr);gap:6px;padding:10px 0;border-top:1px solid #E6E2D6;font-size:16px;align-items:center">
+          <span><b>Digestion</b><br><span style="color:#3D3D3D">probiotiques, graines de courge</span></span><span style="text-align:center;color:#6B6458">—</span><span style="text-align:center;color:#1C7F3D;font-weight:800;font-size:20px" aria-label="oui">✓</span>
+        </div>
+        <div style="display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr) minmax(0,1fr);gap:6px;padding:10px 0;border-top:1px solid #E6E2D6;font-size:16px;align-items:center">
+          <span><b>Peau et pelage</b><br><span style="color:#3D3D3D">huile d’algues (DHA)</span></span><span style="text-align:center;color:#6B6458">—</span><span style="text-align:center;color:#1C7F3D;font-weight:800;font-size:20px" aria-label="oui">✓</span>
+        </div>
+        <div style="display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr) minmax(0,1fr);gap:6px;padding:10px 0;border-top:1px solid #E6E2D6;font-size:16px;align-items:center">
+          <span><b>7 vitamines</b><br><span style="color:#3D3D3D">A, B1, B2, B5, B6, C, E</span></span><span style="text-align:center;color:#6B6458">—</span><span style="text-align:center;color:#1C7F3D;font-weight:800;font-size:20px" aria-label="oui">✓</span>
+        </div>
+    </div>
+
+    <div style="display:flex;flex-direction:column;gap:10px;margin-top:20px;font-size:18px;line-height:1.35">
+      <p style="margin:0"><b style="color:#C4400F">Mobilité</b> · chien actif, grande race, ou qui commence à ralentir : on cible l’articulation.</p>
+      <p style="margin:0"><b style="color:#8A6A00">Multivitamines</b> · chien âgé qui a besoin d’un peu de tout : articulations, défenses naturelles, digestion et pelage.</p>
+    </div>
+
+    
+    <a href="#" style="display:flex;align-items:center;justify-content:center;height:52px;margin-top:16px;background:#FBF9F2;border:2.5px solid #111;border-radius:999px;box-shadow:3px 4px #111;font-family:'League Spartan',sans-serif;font-weight:900;font-size:16px;letter-spacing:.04em;text-transform:uppercase">Découvrir Multivitamines</a>
+  </sc-if>
+  </div>
+
+  <!-- 10 · Allie science et goût : déroulé des actifs -->
+  <div style="padding:28px 16px 30px;border-bottom:2px solid #111">
+    <h2 style="margin:0;font-family:'League Spartan',sans-serif;font-weight:900;font-size:30px;line-height:1.02;color:#2525DC;text-transform:uppercase">Allie science et goût.</h2>
+    <p style="margin:8px 0 0;font-size:18px;line-height:1.3;font-weight:700">Formulé par des vétérinaires nutritionnistes&nbsp;</p>
+
+    <!-- Goût viande : photo à gauche, bloc plus carré -->
+    <div style="display:flex;align-items:stretch;margin-top:18px;background:#E8501A;border:2.5px solid #111;border-radius:16px;box-shadow:4px 5px #111;overflow:hidden;min-height:190px">
+      <img src="/_blob/d203ec12f42e2939f53c91975c9ca0da" alt="Corgi qui mange un soft chew dans la main" style="width:150px;flex:none;object-fit:cover;object-position:50% 30%;display:block;border-right:2.5px solid #111">
+      <div style="padding:16px 14px;display:flex;flex-direction:column;justify-content:center">
+        <div style="font-family:'League Spartan',sans-serif;font-weight:900;font-size:26px;line-height:1;text-transform:uppercase;color:#111">Goût viande</div>
+        <div style="margin-top:8px;font-size:18px;line-height:1.3;font-weight:500;color:#111">Tendre, il le prend comme une friandise.</div>
+      </div>
+    </div>
+
+    <div style="margin-top:22px;font-family:'League Spartan',sans-serif;font-weight:800;font-size:16px;letter-spacing:.07em;text-transform:uppercase">Ses 6 actifs · doses par soft chew</div>
+    <div style="display:flex;flex-direction:column;gap:10px;margin-top:10px">
+      <div style="display:flex;align-items:center;gap:12px;padding:14px 12px;background:#fff;border:2.5px solid #111;border-radius:16px;box-shadow:3px 4px #11111133">
+        <img src="/_blob/b1b4eea4146d72c981eb6543da98086f" alt="crustacés" style="width:52px;height:52px;border-radius:99px;border:2px solid #E6E2D6;display:block;flex:none;object-fit:cover">
+        <div style="flex:1;min-width:0">
+          <div style="font-family:'League Spartan',sans-serif;font-weight:700;font-size:18px;line-height:1.15;color:#C4400F">Glucosamine (HCl)</div>
+          <div style="margin-top:3px;font-size:18px;line-height:1.35;color:#3D3D3D">Stimule la production de cartilage et absorbe les chocs articulaires.</div>
+          <div style="margin-top:4px;font-size:16px;font-style:italic;color:#6B6458">Osaki et al., 2012 · Marine Drugs</div>
+        </div>
+        <div style="flex:none;font-family:'Permanent Marker',cursive;font-size:19px;line-height:1;white-space:nowrap">200 mg</div>
+      </div>
+      <div style="display:flex;align-items:center;gap:12px;padding:14px 12px;background:#fff;border:2.5px solid #111;border-radius:16px;box-shadow:3px 4px #11111133">
+        <img src="/_blob/ca6b268f913118d9af9dfc403308cbf5" alt="brocoli" style="width:52px;height:52px;border-radius:99px;border:2px solid #E6E2D6;display:block;flex:none;object-fit:cover">
+        <div style="flex:1;min-width:0">
+          <div style="font-family:'League Spartan',sans-serif;font-weight:700;font-size:18px;line-height:1.15;color:#C4400F">MSM marin</div>
+          <div style="margin-top:3px;font-size:18px;line-height:1.35;color:#3D3D3D">Contribue au confort articulaire et à la souplesse au quotidien.</div>
+        </div>
+        <div style="flex:none;font-family:'Permanent Marker',cursive;font-size:19px;line-height:1;white-space:nowrap">200 mg</div>
+      </div>
+      <div style="display:flex;align-items:center;gap:12px;padding:14px 12px;background:#fff;border:2.5px solid #111;border-radius:16px;box-shadow:3px 4px #11111133">
+        <img src="/_blob/171b30a853868749dbeb8fb63dd0613b" alt="boeuf" style="width:52px;height:52px;border-radius:99px;border:2px solid #E6E2D6;display:block;flex:none;object-fit:cover">
+        <div style="flex:1;min-width:0">
+          <div style="font-family:'League Spartan',sans-serif;font-weight:700;font-size:18px;line-height:1.15;color:#C4400F">Collagène bovin</div>
+          <div style="margin-top:3px;font-size:18px;line-height:1.35;color:#3D3D3D">Soutien des tissus articulaires et structure du cartilage.</div>
+        </div>
+        <div style="flex:none;font-family:'Permanent Marker',cursive;font-size:19px;line-height:1;white-space:nowrap">100 mg</div>
+      </div>
+      <div style="display:flex;align-items:center;gap:12px;padding:14px 12px;background:#fff;border:2.5px solid #111;border-radius:16px;box-shadow:3px 4px #11111133">
+        <img src="/_blob/daa642a718e4a18037e09fdd76ab3782" alt="poudre blanche" style="width:52px;height:52px;border-radius:99px;border:2px solid #E6E2D6;display:block;flex:none;object-fit:cover">
+        <div style="flex:1;min-width:0">
+          <div style="font-family:'League Spartan',sans-serif;font-weight:700;font-size:18px;line-height:1.15;color:#C4400F">Sulfate de chondroïtine</div>
+          <div style="margin-top:3px;font-size:18px;line-height:1.35;color:#3D3D3D">Hydratation du cartilage et glissement articulaire.</div>
+        </div>
+        <div style="flex:none;font-family:'Permanent Marker',cursive;font-size:19px;line-height:1;white-space:nowrap">35 mg</div>
+      </div>
+      <div style="display:flex;align-items:center;gap:12px;padding:14px 12px;background:#fff;border:2.5px solid #111;border-radius:16px;box-shadow:3px 4px #11111133">
+        <img src="/_blob/6397dd78ead2a255e4ff89005c1924ee" alt="oranges" style="width:52px;height:52px;border-radius:99px;border:2px solid #E6E2D6;display:block;flex:none;object-fit:cover">
+        <div style="flex:1;min-width:0">
+          <div style="font-family:'League Spartan',sans-serif;font-weight:700;font-size:18px;line-height:1.15;color:#C4400F">Vitamine C</div>
+          <div style="margin-top:3px;font-size:18px;line-height:1.35;color:#3D3D3D">Synthèse du collagène et soutien antioxydant.</div>
+        </div>
+        <div style="flex:none;font-family:'Permanent Marker',cursive;font-size:19px;line-height:1;white-space:nowrap">30 mg</div>
+      </div>
+      <div style="display:flex;align-items:center;gap:12px;padding:14px 12px;background:#fff;border:2.5px solid #111;border-radius:16px;box-shadow:3px 4px #11111133">
+        <img src="/_blob/2ff100dd4a2d72fcf21f586319f1e91d" alt="épinards" style="width:52px;height:52px;border-radius:99px;border:2px solid #E6E2D6;display:block;flex:none;object-fit:cover">
+        <div style="flex:1;min-width:0">
+          <div style="font-family:'League Spartan',sans-serif;font-weight:700;font-size:18px;line-height:1.15;color:#C4400F">Vitamine E</div>
+          <div style="margin-top:3px;font-size:18px;line-height:1.35;color:#3D3D3D">Protège les cellules contre le stress oxydatif.</div>
+          <div style="margin-top:4px;font-size:16px;font-style:italic;color:#6B6458">Barroso et al., 2024 · Veterinary Sciences</div>
+        </div>
+        <div style="flex:none;font-family:'Permanent Marker',cursive;font-size:19px;line-height:1;white-space:nowrap">2 mg</div>
+      </div>
+    </div>
+
+    <span style="display:inline-block;margin-top:16px;padding:6px 12px;background:#FBF9F2;border:2px solid #111;border-radius:999px;font-size:18px;font-weight:700">Sans sucre ajouté · sans mauvais gras</span>
+
+    <a href="#" style="display:flex;align-items:center;justify-content:center;height:52px;margin-top:18px;background:#FBF9F2;border:2.5px solid #111;border-radius:999px;box-shadow:3px 4px #111;font-family:'League Spartan',sans-serif;font-weight:900;font-size:18px;letter-spacing:.04em;text-transform:uppercase">Voir la composition intégrale</a>
+  </div>
+
+  <!-- 11 · Autres produits : en pack, ajout au panier sans quitter la page -->
+  
+
+  <!-- 12 · Alternative à la friandise -->
+  <div style="padding:28px 16px 30px">
+    <h2 style="margin:0;font-family:'League Spartan',sans-serif;font-weight:900;font-size:26px;line-height:1.05;color:#2525DC;text-transform:uppercase">L'alternative à la friandise.</h2>
+    <div style="margin-top:16px;border:2.5px solid #111;border-radius:18px;box-shadow:4px 5px #111;background:#fff;overflow:hidden">
+      <img src="/_blob/2ee24d17b40925d249606cce02a3f3da" alt="Main qui tient un soft chew en forme de coeur au-dessus du bocal" style="width:100%;height:210px;object-fit:cover;object-position:35% 50%;display:block;border-bottom:2.5px solid #111">
+      <div style="padding:14px">
+        <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px">
+          <div style="padding:7px 6px;border:2px solid #111;border-radius:10px;font-size:18px;font-weight:700;text-align:center">Friandise classique</div>
+          <div style="padding:7px 6px;border:2px solid #111;border-radius:10px;background:#2525DC;color:#FBF9F2;font-family:'League Spartan',sans-serif;font-size:18px;font-weight:900;text-align:center;text-transform:uppercase">Mobilité</div>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 8px;margin-top:6px">
+          <div style="padding:10px 6px;border-bottom:2px solid #111;font-size:18px;text-align:center">Gourmande</div>
+          <div style="padding:10px 6px;border-bottom:2px solid #111;font-size:18px;font-weight:700;text-align:center">Gourmande</div>
+          <div style="padding:10px 6px;border-bottom:2px solid #111;font-size:18px;text-align:center">Rien d'utile en plus</div>
+          <div style="padding:10px 6px;border-bottom:2px solid #111;font-size:18px;font-weight:700;text-align:center">6 actifs dosés</div>
+          <div style="padding:10px 6px;font-size:18px;text-align:center">À l'occasion</div>
+          <div style="padding:10px 6px;font-size:18px;font-weight:700;text-align:center">Chaque jour</div>
+        </div>
+      </div>
+    </div>
+    <p style="margin:16px 0 0;font-size:18px;line-height:1.4;font-weight:500">Vous lui donnez déjà une friandise ? Remplacez-la par son soft chew.</p>
+  </div>
+
+
+
+  <!-- 13-14 · Sur le terrain + nos événements (fusionnés) -->
+  <div style="padding:28px 0 28px;border-bottom:2px solid #111">
+    <div style="padding:0 16px">
+      <h2 style="margin:0;font-family:'League Spartan',sans-serif;font-weight:900;font-size:27px;line-height:1.05;color:#2525DC;text-transform:uppercase">Sur le terrain, chien après chien.</h2>
+      <p style="margin:10px 0 0;font-size:18px;line-height:1.4;font-weight:500">Nous partons à la rencontre des chiens et de leurs maîtres, partout en France.</p>
+    </div>
+    <div style="display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-left:20px;padding:16px 20px 8px;scrollbar-width:none">
+      <div style="flex:none;width:280px;scroll-snap-align:start;border:2.5px solid #111;border-radius:16px;box-shadow:4px 5px #111;overflow:hidden;background:#fff">
+        <img src="/_blob/3735088b18976ffc6d134b5e8217723a" alt="Les fondatrices au stand Jacqueline's Lab" style="width:280px;height:220px;object-fit:cover;object-position:50% 20%;display:block;border-bottom:2.5px solid #111">
+        <div style="padding:10px 12px;font-size:18px;font-weight:700">Journée Corgi · Paris</div>
+      </div>
+      <div style="flex:none;width:280px;scroll-snap-align:start;border:2.5px solid #111;border-radius:16px;box-shadow:4px 5px #111;overflow:hidden;background:#fff">
+        <img src="/_blob/953db60b53045a32edb7c2dabd953625" alt="Main qui tend un soft chew à un chien" style="width:280px;height:200px;object-fit:cover;display:block;border-bottom:2.5px solid #111">
+        <div style="padding:10px 12px;font-size:18px;font-weight:700">[Nom de l'événement] · [ville, date]</div>
+      </div>
+      <div style="flex:none;width:280px;scroll-snap-align:start;border:2.5px solid #111;border-radius:16px;box-shadow:4px 5px #111;overflow:hidden;background:repeating-linear-gradient(135deg,#F3EFE2 0,#F3EFE2 14px,#E6E0CC 14px,#E6E0CC 28px)">
+        <div style="height:200px;display:flex;align-items:center;justify-content:center;border-bottom:2.5px solid #111"><span style="padding:8px 12px;border:2px dashed #111;border-radius:12px;background:#FBF9F2;font-size:16px;font-weight:700;text-transform:uppercase">Photo à shooter</span></div>
+        <div style="padding:10px 12px;font-size:18px;font-weight:700;background:#fff">Les fondatrices avec des chiens</div>
+      </div>
+    </div>
+    <div style="display:flex;align-items:center;gap:14px;margin:12px 16px 0;padding:14px 16px;background:#FBD9C7;border:2.5px solid #111;border-radius:18px;box-shadow:4px 5px #111">
+      <div style="font-family:'League Spartan',sans-serif;font-weight:900;font-size:48px;line-height:1">50+</div>
+      <div>
+        <div style="font-size:18px;font-weight:700;line-height:1.2">événements en France</div>
+        <div style="margin-top:2px;font-size:16px;line-height:1.3;color:#3D3D3D">Observé en événement, pas un essai clinique.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 15 · Avis ostéo -->
+  <div style="padding:28px 16px 30px;background:#FBD9C7;border-bottom:2px solid #111">
+    <h2 style="margin:0;font-family:'League Spartan',sans-serif;font-weight:900;font-size:26px;line-height:1.05;color:#2525DC;text-transform:uppercase">L'avis de l'ostéopathe.</h2>
+    <div style="position:relative;width:358px;height:201px;margin-top:16px;box-sizing:border-box;overflow:hidden;border:2.5px solid #111;border-radius:18px;box-shadow:4px 5px #111;background:#111">
+      <div style="position:absolute;left:0;right:0;top:0;bottom:0;display:flex;align-items:center;justify-content:center">
+        <a href="#" aria-label="Lire la vidéo de l'ostéopathe" style="width:68px;height:68px;border-radius:99px;background:#FBF9F2;border:2.5px solid #111;box-shadow:3px 4px #E8501A;display:flex;align-items:center;justify-content:center">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="#111" aria-hidden="true"><path d="M8 5v14l11-7z"></path></svg>
+        </a>
+      </div>
+      <div style="position:absolute;left:12px;bottom:10px;padding:3px 10px;background:#F9E7A8;border:2px solid #111;border-radius:8px;font-size:16px;font-weight:800;text-transform:uppercase">Vidéo à tourner</div>
+    </div>
+    <p style="margin:16px 0 0;font-size:18px;line-height:1.4;font-weight:500">« [Citation de l'ostéopathe : une phrase] »</p>
+    <div style="margin-top:8px;font-size:18px;font-weight:700">[Prénom Nom], ostéopathe</div>
+  </div>
+
+  <!-- 16 · La routine -->
+  <div style="padding:28px 16px 30px;border-bottom:2px solid #111">
+    <h2 style="margin:0;font-family:'League Spartan',sans-serif;font-weight:900;font-size:26px;line-height:1.05;color:#2525DC;text-transform:uppercase">Son rituel de tous les jours.</h2>
+    <div style="position:relative;margin-top:22px">
+      <div style="position:absolute;left:17px;top:18px;bottom:60px;width:3px;background:#111"></div>
+      <div style="position:relative;padding-left:56px;padding-bottom:22px">
+        <div style="position:absolute;left:0;top:0;width:38px;height:38px;border-radius:99px;background:#FBF9F2;border:2.5px solid #111;display:flex;align-items:center;justify-content:center;font-family:'League Spartan',sans-serif;font-weight:900;font-size:18px">1</div>
+        <span style="display:inline-block;padding:3px 12px;background:#2525DC;color:#FBF9F2;border-radius:999px;font-size:16px;font-weight:700">Jours 1 à 10</span>
+        <div style="margin-top:6px;font-family:'League Spartan',sans-serif;font-weight:900;font-size:20px;text-transform:uppercase">La mise en route</div>
+        <p style="margin:4px 0 0;font-size:18px;line-height:1.4">Votre chien adopte son rituel.</p>
+      </div>
+      <div style="position:relative;padding-left:56px;padding-bottom:22px">
+        <div style="position:absolute;left:0;top:0;width:38px;height:38px;border-radius:99px;background:#FBF9F2;border:2.5px solid #111;display:flex;align-items:center;justify-content:center;font-family:'League Spartan',sans-serif;font-weight:900;font-size:18px">2</div>
+        <span style="display:inline-block;padding:3px 12px;background:#2525DC;color:#FBF9F2;border-radius:999px;font-size:16px;font-weight:700">Dès 1 mois</span>
+        <div style="margin-top:6px;font-family:'League Spartan',sans-serif;font-weight:900;font-size:20px;text-transform:uppercase">La routine ancrée</div>
+        <p style="margin:4px 0 0;font-size:18px;line-height:1.4">Le geste devient automatique.</p>
+      </div>
+      <div style="position:relative;padding-left:56px">
+        <div style="position:absolute;left:0;top:0;width:38px;height:38px;border-radius:99px;background:#E8501A;border:2.5px solid #111;display:flex;align-items:center;justify-content:center;font-family:'League Spartan',sans-serif;font-weight:900;font-size:18px">3</div>
+        <span style="display:inline-block;padding:3px 12px;background:#E8501A;border:2px solid #111;border-radius:999px;font-size:16px;font-weight:800">3 mois</span>
+        <div style="margin-top:6px;font-family:'League Spartan',sans-serif;font-weight:900;font-size:20px;text-transform:uppercase">Le bilan</div>
+        <p style="margin:4px 0 0;font-size:18px;line-height:1.4;font-weight:700">Cure de 3 mois minimum, idéalement en continu.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 17 · Tes questions (livraison, paiement, abonnement inclus) -->
+  <div style="padding:28px 16px 30px;border-bottom:2px solid #111">
+    <h2 style="margin:0;font-family:'League Spartan',sans-serif;font-weight:900;font-size:26px;line-height:1.05;color:#2525DC;text-transform:uppercase">Vos questions.</h2>
+    <div style="display:flex;flex-direction:column;gap:10px;margin-top:16px">
+      <details open="" style="background:#fff;border:2.5px solid #111;border-radius:14px;box-shadow:3px 4px #111;padding:0 14px">
+        <summary style="display:flex;align-items:center;justify-content:space-between;gap:10px;min-height:54px;font-size:18px;font-weight:700">Combien par jour ?<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2.6" stroke-linecap="round" aria-hidden="true" style="flex:none"><path d="M5 12h14"></path></svg></summary>
+        <p style="margin:0 0 14px;font-size:18px;line-height:1.4">1 de 1 à 10 kg, 2 de 11 à 30 kg, 3 au-delà. Un sachet contient 60 soft chews.</p>
+      </details>
+      <details style="background:#fff;border:2.5px solid #111;border-radius:14px;box-shadow:3px 4px #111;padding:0 14px">
+        <summary style="display:flex;align-items:center;justify-content:space-between;gap:10px;min-height:54px;font-size:18px;font-weight:700">Et si ça ne lui plaît pas ?<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2.6" stroke-linecap="round" aria-hidden="true" style="flex:none"><path d="M12 5v14M5 12h14"></path></svg></summary>
+        <p style="margin:0 0 14px;font-size:18px;line-height:1.4">Satisfait ou remboursé 60 jours, sans formulaire.</p>
+      </details>
+      <details style="background:#fff;border:2.5px solid #111;border-radius:14px;box-shadow:3px 4px #111;padding:0 14px">
+        <summary style="display:flex;align-items:center;justify-content:space-between;gap:10px;min-height:54px;font-size:18px;font-weight:700">Livraison et retours<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2.6" stroke-linecap="round" aria-hidden="true" style="flex:none"><path d="M12 5v14M5 12h14"></path></svg></summary>
+        <p style="margin:0 0 14px;font-size:18px;line-height:1.4">Livraison offerte dès 70 € · toujours offerte en abonnement.</p>
+      </details>
+      <details style="background:#fff;border:2.5px solid #111;border-radius:14px;box-shadow:3px 4px #111;padding:0 14px">
+        <summary style="display:flex;align-items:center;justify-content:space-between;gap:10px;min-height:54px;font-size:18px;font-weight:700">Comment marche l'abonnement ?<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2.6" stroke-linecap="round" aria-hidden="true" style="flex:none"><path d="M12 5v14M5 12h14"></path></svg></summary>
+        <p style="margin:0 0 14px;font-size:18px;line-height:1.4">−15 % sur chaque sachet, livraison offerte. Modifiable et annulable en 1 clic.</p>
+      </details>
+      <details style="background:#fff;border:2.5px solid #111;border-radius:14px;box-shadow:3px 4px #111;padding:0 14px">
+        <summary style="display:flex;align-items:center;justify-content:space-between;gap:10px;min-height:54px;font-size:18px;font-weight:700">Moyens de paiement<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2.6" stroke-linecap="round" aria-hidden="true" style="flex:none"><path d="M12 5v14M5 12h14"></path></svg></summary>
+        <p style="margin:0 0 14px;font-size:18px;line-height:1.4">Carte, PayPal ou Apple Pay, paiement sécurisé.</p>
+      </details>
+      <details style="background:#fff;border:2.5px solid #111;border-radius:14px;box-shadow:3px 4px #111;padding:0 14px">
+        <summary style="display:flex;align-items:center;justify-content:space-between;gap:10px;min-height:54px;font-size:18px;font-weight:700">À partir de quel âge ?<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2.6" stroke-linecap="round" aria-hidden="true" style="flex:none"><path d="M12 5v14M5 12h14"></path></svg></summary>
+        <p style="margin:0 0 14px;font-size:18px;line-height:1.4">[Réponse actuelle du site]</p>
+      </details>
+    </div>
+  </div>
+
+  <!-- Vrais chiens : défilé latéral, avant le quiz -->
+  <div style="padding:28px 0 30px;background:#F9E7A8;border-bottom:2px solid #111">
+    <div style="padding:0 16px">
+      <h2 style="margin:0;font-family:'League Spartan',sans-serif;font-weight:900;font-size:26px;line-height:1.05;color:#2525DC;text-transform:uppercase">On en a marre de voir de l’IA. Voici nos vrais fans.</h2>
+      <p style="margin:8px 0 0;font-size:18px;line-height:1.35;font-weight:500">Ils goûtent leurs chews, en vrai, sur nos stands.</p>
+    </div>
+    <div style="display:flex;align-items:center;justify-content:space-between;padding:14px 16px 0">
+      <span style="font-size:16px;font-weight:700;text-transform:uppercase;letter-spacing:.05em">1 / 3</span>
+      <span style="font-size:16px;font-weight:700">Faites glisser →</span>
+    </div>
+    <div style="display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-left:20px;padding:12px 20px 8px;scrollbar-width:none">
+      <div style="flex:none;width:250px;scroll-snap-align:start;border:2.5px solid #111;border-radius:16px;box-shadow:4px 5px #111;overflow:hidden;background:#fff">
+        <img src="/_blob/367438269a1c14677e2e789dadfb981e" alt="Bouvier bernois qui croque un soft chew Mobilité" style="width: 250px; height: 397px; object-fit: cover; display: block; border-bottom: 2.5px solid #111">
+        
+      </div>
+      <div style="flex:none;width:250px;scroll-snap-align:start;border:2.5px solid #111;border-radius:16px;box-shadow:4px 5px #111;overflow:hidden;background:#fff">
+        <img src="/_blob/b3f3b235bf51df8a5adc1886a99c9f05" alt="Dalmatien qui prend un soft chew sur le stand" style="width: 250px; height: 397px; object-fit: cover; display: block; border-bottom: 2.5px solid #111">
+        
+      </div>
+      <div style="flex:none;width:250px;scroll-snap-align:start;border:2.5px solid #111;border-radius:16px;box-shadow:4px 5px #111;overflow:hidden;background:#fff">
+        <img src="/_blob/91e5c0e6849ca237f73b51742bd3ce2c" alt="Épagneul qui attrape un soft chew" style="width: 250px; height: 397px; object-fit: cover; display: block; border-bottom: 2.5px solid #111">
+      </div>
+    </div>
+  </div>
+
+  <!-- Quiz tout en bas : renvoie vers la bonne page produit -->
+  <div style="padding:30px 16px 34px;background:#2525DC">
+    <h2 style="margin:0;font-family:'League Spartan',sans-serif;font-weight:900;font-size:27px;line-height:1.05;color:#FBF9F2;text-transform:uppercase">PAS SÛR QUE CE SOIT LE BON CHOIX POUR VOTRE CHIEN ?</h2>
+    <p style="margin:8px 0 0;font-size:18px;line-height:1.35;font-weight:500;color:#FBF9F2">3 questions, et nous vous orientons vers le complément qu'il lui faut.</p>
+    <div style="margin-top:16px;padding:16px;background:#FBF9F2;border:2.5px solid #111;border-radius:18px;box-shadow:4px 5px #111">
+      <div style="display:flex;align-items:center;justify-content:space-between">
+        <span style="font-size:16px;font-weight:700;letter-spacing:.06em;text-transform:uppercase">Question 1 sur 3</span>
+        <span style="display:flex;gap:5px"><span style="width:22px;height:6px;border-radius:9px;background:#2525DC"></span><span style="width:22px;height:6px;border-radius:9px;background:#CFCBBB"></span><span style="width:22px;height:6px;border-radius:9px;background:#CFCBBB"></span></span>
+      </div>
+      <div style="margin-top:10px;font-family:'League Spartan',sans-serif;font-weight:900;font-size:21px;line-height:1.1">Qu'est-ce qui compte le plus pour lui en ce moment ?</div>
+      <div style="display:flex;flex-direction:column;gap:8px;margin-top:12px">
+        <button type="button" style="display:flex;align-items:center;gap:10px;height:54px;text-align:left;padding:0 14px;background:#fff;border:2.5px solid #111;border-radius:14px;box-shadow:3px 4px #111;font-size:18px;font-weight:600"><span style="width:14px;height:14px;border-radius:99px;background:#E8501A;border:2px solid #111;flex:none"></span>Ses articulations, il ralentit</button>
+        <button type="button" style="display:flex;align-items:center;gap:10px;height:54px;text-align:left;padding:0 14px;background:#fff;border:2.5px solid #111;border-radius:14px;box-shadow:3px 4px #111;font-size:18px;font-weight:600"><span style="width:14px;height:14px;border-radius:99px;background:#1C7F3D;border:2px solid #111;flex:none"></span>Son ventre, sa digestion</button>
+        <button type="button" style="display:flex;align-items:center;gap:10px;height:54px;text-align:left;padding:0 14px;background:#fff;border:2.5px solid #111;border-radius:14px;box-shadow:3px 4px #111;font-size:18px;font-weight:600"><span style="width:14px;height:14px;border-radius:99px;background:#F5D14E;border:2px solid #111;flex:none"></span>Sa forme au quotidien</button>
+      </div>
+      <div style="margin-top:12px;font-size:16px;color:#3D3D3D">Résultat : la page produit adaptée, avec sa dose selon son poids.</div>
+    </div>
+  </div>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"bf":{"editor":"boolean","default":true,"section":"Offre"},"$preview":{"width":390,"height":8800}}'>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { plan: null, w: null, cmp: false };
+  }
+  fmt(n) { return n.toFixed(2).replace('.', ','); }
+  renderVals() {
+    const bf = this.props.bf ?? true;
+    const plan = this.state.plan;
+    const w = this.state.w;
+    const days = [60, 30, 20];
+    const perDay = [1, 2, 3];
+    const labels = ['1–10 kg', '11–30 kg ', '+ de 30 kg'];
+    const durations = ['environ 2 mois', 'environ 1 mois', 'environ 20 jours'];
+    const once = bf ? 30.72 : 38.40;
+    const abo = bf ? 26.11 : 32.64;
+    const sel = 'box-shadow:4px 5px #111, inset 0 0 0 3px #E8501A;';
+    const unsel = 'box-shadow:4px 5px #111;';
+    const cardBase = 'position:relative;display:block;width:100%;box-sizing:border-box;padding:14px;background:#FBF9F2;border:2.5px solid #111;border-radius:18px;';
+    const dotOn = 'width:10px;height:10px;border-radius:99px;background:#E8501A;display:block;';
+    const dotOff = 'width:10px;height:10px;border-radius:99px;background:#fff;display:block;';
+    const pillBase = 'height:48px;border:2.5px solid #111;border-radius:14px;font-family:League Spartan,sans-serif;font-weight:800;font-size:18px;text-transform:none;';
+    const pills = labels.map((label, i) => ({
+      label: label,
+      style: pillBase + (i === w
+        ? 'background:#E8501A;color:#111;box-shadow:2px 3px #111;transform:translate(1px,2px);'
+        : 'background:#FBF9F2;color:#111;box-shadow:3px 4px #111;'),
+      pick: () => this.setState({ w: i })
+    }));
+    const price = plan === 'once' ? once : abo;
+    const ready = w !== null;
+    const ctaBase = 'display:flex;align-items:center;justify-content:center;height:56px;margin-top:18px;border:2.5px solid #111;border-radius:999px;font-family:League Spartan,sans-serif;font-weight:900;font-size:18px;letter-spacing:.04em;text-transform:uppercase;';
+    const cmp = this.state.cmp;
+    return {
+      cmpOpen: cmp, cmpExp: cmp ? 'true' : 'false',
+      cmpLabel: cmp ? 'Masquer les différences' : 'Voir les différences',
+      cmpChevron: 'flex:none;width:44px;height:44px;border:2px solid #111;border-radius:99px;display:flex;align-items:center;justify-content:center;transform:rotate(' + (cmp ? '180' : '0') + 'deg)',
+      cmpToggle: () => this.setState({ cmp: !this.state.cmp }),
+      bf: bf,
+      pills: pills,
+      aboOpen: plan === 'abo',
+      onceOpen: plan === 'once',
+      weightInfo: ready ? perDay[w] + (perDay[w] > 1 ? ' soft chews' : ' soft chew') + ' par jour · un sachet de 60 dure ' + durations[w] + ' · soit ' + this.fmt(price / days[w]) + ' € par jour' : 'Choisissez son poids : nous calculons sa dose.',
+      pickAbo: () => this.setState({ plan: 'abo' }),
+      pickOnce: () => this.setState({ plan: 'once' }),
+      aboStyle: cardBase + (plan === 'abo' ? sel : unsel),
+      onceStyle: cardBase + (plan === 'once' ? sel : unsel),
+      aboDot: plan === 'abo' ? dotOn : dotOff,
+      onceDot: plan === 'once' ? dotOn : dotOff,
+      aboPrice: this.fmt(abo),
+      oncePrice: this.fmt(once),
+      aboTag: bf ? '−32 %' : '−15 %',
+      ctaLabel: ready ? 'Acheter · ' + this.fmt(price) + ' €' : 'Choisissez son poids',
+      ctaStyle: ctaBase + (ready ? 'background:#2525DC;color:#FBF9F2;box-shadow:5px 6px #111;' : 'background:#E6E2D6;color:#4A4A4A;box-shadow:none;')
+    };
+  }
+}
+</script>
+</body>
+</html>

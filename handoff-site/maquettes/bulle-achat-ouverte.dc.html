@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>V2 · bulle d'achat ouverte</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;700;900&amp;family=Outfit:wght@400;500;600;700&amp;family=Permanent+Marker&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:inherit;text-decoration:none}
+summary{list-style:none;cursor:pointer}
+summary::-webkit-details-marker{display:none}
+button{font-family:inherit;color:inherit;cursor:pointer}
+</style>
+</helmet>
+<div style="width: 387px; min-height: 980px; background: #FBF9F2; font-family: 'Outfit',sans-serif; color: #111; box-sizing: border-box; height: 716px">
+  
+<div style="padding-bottom: 24px">
+<div style="padding: 0 16px; box-sizing: border-box">
+    
+    
+
+    <!-- Poids : une seule ligne -->
+    
+    
+    
+
+    <!-- 2 options : rien de présélectionné ; un clic ouvre la bulle (poids, prénom, acheter) -->
+    <div style="display:flex;flex-direction:column;gap:14px;margin-top:16px">
+      <div style="{{ aboStyle }}">
+        <button type="button" onClick="{{ pickAbo }}" style="display:block;width:100%;padding:0;margin:0;background:none;border:0;text-align:left;position:relative">
+        
+        <span style="display:flex;align-items:center;justify-content:space-between;width:100%">
+          <span style="display:flex;align-items:center;gap:10px">
+            <span style="width:22px;height:22px;border-radius:99px;border:2.5px solid #111;background:#fff;display:flex;align-items:center;justify-content:center;flex:none">
+              <span style="{{ aboDot }}"></span>
+            </span>
+            <span style="font-family:'League Spartan',sans-serif;font-weight:900;font-size:18px;white-space:nowrap;text-transform:uppercase">Abonnement</span>
+          </span>
+          <span style="display:flex;align-items:baseline;gap:6px">
+            <sc-if value="{{bf}}" hint-placeholder-val="{{ true }}"><span style="font-size:14px;white-space:nowrap;color:#4A4A4A;text-decoration:line-through">38,40 €</span></sc-if>
+            <span style="font-family:'League Spartan',sans-serif;font-weight:900;font-size:26px;white-space:nowrap">{{ aboPrice }} €</span>
+          </span>
+        </span>
+        <span style="display:flex;align-items:flex-end;justify-content:space-between;width:100%;margin-top:6px;gap:8px"><span style="display: block; font-size: 14px; line-height: 1.3; color: #3D3D3D; font-weight: 500">Livraison offerte ·&nbsp; sans engagement&nbsp;</span>
+          <span style="flex: none; padding: 2px 8px; background: #FBD9C7; border: 2px solid #111; border-radius: 8px; font-family: 'League Spartan',sans-serif; font-weight: 900; font-size: 14px">{{ aboTag }}</span>
+        </span>
+        
+      </button>
+        <sc-if value="{{aboOpen}}" hint-placeholder-val="{{ false }}">
+          <div style="margin-top:14px;padding-top:14px;border-top:2px dashed #111">
+            <div style="font-family:'League Spartan',sans-serif;font-weight:800;font-size:14px;letter-spacing:.07em;text-transform:uppercase">1 · Poids de votre chien</div>
+            <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-top:8px">
+              <sc-for list="{{pills}}" as="p" hint-placeholder-count="3">
+                <button type="button" onClick="{{ p.pick }}" style="{{ p.style }}">{{ p.label }}</button>
+              </sc-for>
+            </div>
+            <div style="margin-top:8px;font-size:15px;line-height:1.3;color:#3D3D3D">{{ weightInfo }}</div>
+            <label style="display:block;margin-top:16px;font-family:'League Spartan',sans-serif;font-weight:800;font-size:14px;letter-spacing:.07em;text-transform:uppercase">2 · Le prénom de votre chien
+              <input type="text" value="Nestor" placeholder="Ex. Nestor" style="display:block;width:100%;box-sizing:border-box;height:50px;margin-top:8px;padding:0 14px;background:#fff;border:2.5px solid #111;border-radius:14px;font-family:'Outfit',sans-serif;font-size:17px;font-weight:500;text-transform:none;letter-spacing:0;color:#111">
+            </label>
+            <a href="#" style="{{ ctaStyle }}">{{ ctaLabel }}</a>
+            <p style="margin:12px 0 0;font-size:15px;line-height:1.35;font-weight:500">Cure de 3 mois recommandée, idéalement en continu.</p>
+            <div style="margin-top:8px;font-size:15px;font-weight:700">Satisfait ou remboursé</div>
+            <div style="margin-top:4px;font-size:14px;color:#3D3D3D;font-weight:500">Livraison point relais offerte dès 70 € · toujours offerte en abonnement</div>
+          </div>
+        </sc-if>
+      <span style="position: absolute; top: -12px; left: 28px; padding: 3px 10px; background: #E8501A; color: #111; border: 2px solid #111; border-radius: 999px; box-shadow: 2px 3px #111; font-family: 'League Spartan',sans-serif; font-weight: 800; font-size: 12px; letter-spacing: .06em; text-transform: uppercase; text-align: left">Recommandé</span></div>
+
+      <div style="{{ onceStyle }}">
+        <button type="button" onClick="{{ pickOnce }}" style="display:block;width:100%;padding:0;margin:0;background:none;border:0;text-align:left;position:relative">
+        <span style="display:flex;align-items:center;justify-content:space-between;width:100%">
+          <span style="display:flex;align-items:center;gap:10px">
+            <span style="width:22px;height:22px;border-radius:99px;border:2.5px solid #111;background:#fff;display:flex;align-items:center;justify-content:center;flex:none">
+              <span style="{{ onceDot }}"></span>
+            </span>
+            <span style="font-family:'League Spartan',sans-serif;font-weight:900;font-size:18px;white-space:nowrap;text-transform:uppercase">Achat unique</span>
+          </span>
+          <span style="display:flex;align-items:baseline;gap:6px">
+            <sc-if value="{{bf}}" hint-placeholder-val="{{ true }}"><span style="font-size:14px;white-space:nowrap;color:#4A4A4A;text-decoration:line-through">38,40 €</span></sc-if>
+            <span style="font-family:'League Spartan',sans-serif;font-weight:900;font-size:26px;white-space:nowrap">{{ oncePrice }} €</span>
+          </span>
+        </span>
+        <span style="display:flex;align-items:flex-end;justify-content:space-between;width:100%;margin-top:6px;gap:8px">
+          <span style="display:block;font-size:14px;line-height:1.3;color:#3D3D3D;font-weight:500">Sans engagement · pour tester d'abord</span>
+          <sc-if value="{{bf}}" hint-placeholder-val="{{ true }}"><span style="flex:none;padding:2px 8px;background:#FBD9C7;border:2px solid #111;border-radius:8px;font-family:'League Spartan',sans-serif;font-weight:900;font-size:14px">−20 %</span></sc-if>
+        </span>
+        
+      </button>
+        <sc-if value="{{onceOpen}}" hint-placeholder-val="{{ false }}">
+          <div style="margin-top:14px;padding-top:14px;border-top:2px dashed #111">
+            <div style="font-family:'League Spartan',sans-serif;font-weight:800;font-size:14px;letter-spacing:.07em;text-transform:uppercase">1 · Poids de votre chien</div>
+            <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-top:8px">
+              <sc-for list="{{pills}}" as="p" hint-placeholder-count="3">
+                <button type="button" onClick="{{ p.pick }}" style="{{ p.style }}">{{ p.label }}</button>
+              </sc-for>
+            </div>
+            <div style="margin-top:8px;font-size:15px;line-height:1.3;color:#3D3D3D">{{ weightInfo }}</div>
+            <label style="display:block;margin-top:16px;font-family:'League Spartan',sans-serif;font-weight:800;font-size:14px;letter-spacing:.07em;text-transform:uppercase">2 · Le prénom de votre chien
+              <input type="text" placeholder="Ex. Nestor" style="display:block;width:100%;box-sizing:border-box;height:50px;margin-top:8px;padding:0 14px;background:#fff;border:2.5px solid #111;border-radius:14px;font-family:'Outfit',sans-serif;font-size:17px;font-weight:500;text-transform:none;letter-spacing:0;color:#111">
+            </label>
+            <a href="#" style="{{ ctaStyle }}">{{ ctaLabel }}</a>
+            <p style="margin:12px 0 0;font-size:15px;line-height:1.35;font-weight:500">Cure de 3 mois recommandée, idéalement en continu.</p>
+            <div style="margin-top:8px;font-size:15px;font-weight:700">Satisfait ou remboursé</div>
+            <div style="margin-top:4px;font-size:14px;color:#3D3D3D;font-weight:500">Livraison point relais offerte dès 70 € · toujours offerte en abonnement</div>
+          </div>
+        </sc-if>
+      </div>
+    </div>
+
+    <!-- Une seule bulle signature -->
+    <div style="text-align:center;margin-top:28px">
+      
+    </div>
+  </div>
+
+  </div></div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"bf":{"editor":"boolean","default":true,"section":"Offre"},"$preview":{"width":390,"height":980}}'>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { plan: 'abo', w: 1 };
+  }
+  fmt(n) { return n.toFixed(2).replace('.', ','); }
+  renderVals() {
+    const bf = this.props.bf ?? true;
+    const plan = this.state.plan;
+    const w = this.state.w;
+    const days = [60, 30, 20];
+    const perDay = [1, 2, 3];
+    const labels = ['1–10 kg', '11–30 kg ', '+ de 30 kg'];
+    const durations = ['environ 2 mois', 'environ 1 mois', 'environ 20 jours'];
+    const once = bf ? 30.72 : 38.40;
+    const abo = bf ? 26.11 : 32.64;
+    const sel = 'box-shadow:4px 5px #111, inset 0 0 0 3px #E8501A;';
+    const unsel = 'box-shadow:4px 5px #111;';
+    const cardBase = 'position:relative;display:block;width:100%;box-sizing:border-box;padding:14px;background:#FBF9F2;border:2.5px solid #111;border-radius:18px;';
+    const dotOn = 'width:10px;height:10px;border-radius:99px;background:#E8501A;display:block;';
+    const dotOff = 'width:10px;height:10px;border-radius:99px;background:#fff;display:block;';
+    const pillBase = 'height:48px;border:2.5px solid #111;border-radius:14px;font-family:League Spartan,sans-serif;font-weight:800;font-size:15px;text-transform:none;';
+    const pills = labels.map((label, i) => ({
+      label: label,
+      style: pillBase + (i === w
+        ? 'background:#E8501A;color:#111;box-shadow:2px 3px #111;transform:translate(1px,2px);'
+        : 'background:#FBF9F2;color:#111;box-shadow:3px 4px #111;'),
+      pick: () => this.setState({ w: i })
+    }));
+    const price = plan === 'once' ? once : abo;
+    const ready = w !== null;
+    const ctaBase = 'display:flex;align-items:center;justify-content:center;height:56px;margin-top:18px;border:2.5px solid #111;border-radius:999px;font-family:League Spartan,sans-serif;font-weight:900;font-size:17px;letter-spacing:.04em;text-transform:uppercase;';
+    return {
+      bf: bf,
+      pills: pills,
+      aboOpen: plan === 'abo',
+      onceOpen: plan === 'once',
+      weightInfo: ready ? perDay[w] + (perDay[w] > 1 ? ' soft chews' : ' soft chew') + ' par jour · un sachet de 60 dure ' + durations[w] + ' · soit ' + this.fmt(price / days[w]) + ' € par jour' : 'Choisissez son poids : nous calculons sa dose.',
+      pickAbo: () => this.setState({ plan: 'abo' }),
+      pickOnce: () => this.setState({ plan: 'once' }),
+      aboStyle: cardBase + (plan === 'abo' ? sel : unsel),
+      onceStyle: cardBase + (plan === 'once' ? sel : unsel),
+      aboDot: plan === 'abo' ? dotOn : dotOff,
+      onceDot: plan === 'once' ? dotOn : dotOff,
+      aboPrice: this.fmt(abo),
+      oncePrice: this.fmt(once),
+      aboTag: bf ? '−32 %' : '−15 %',
+      ctaLabel: ready ? 'Acheter · ' + this.fmt(price) + ' €' : 'Choisissez son poids',
+      ctaStyle: ctaBase + (ready ? 'background:#2525DC;color:#FBF9F2;box-shadow:5px 6px #111;' : 'background:#E6E2D6;color:#4A4A4A;box-shadow:none;')
+    };
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Menu mobile</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;700;900&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;color:inherit;cursor:pointer}
+</style>
+</helmet>
+<div style="position:relative;width:390px;height:844px;overflow:hidden;background:#FBF9F2;font-family:'Outfit',sans-serif;color:#111;box-sizing:border-box">
+
+  <!-- Bandeau -->
+  <div style="height:32px;background:#2525DC;color:#FBF9F2;display:flex;align-items:center;justify-content:center;font-family:'League Spartan',sans-serif;font-weight:700;font-size:16px;letter-spacing:.06em;text-transform:uppercase"><span>BLACK FRIDAY ·&nbsp; 3E SACHET OFFERT DÈS 2</span></div>
+
+  <!-- En-tête : le bouton menu devient une croix quand le menu est ouvert -->
+  <div style="position:relative;z-index:3;height:91px;display:flex;align-items:center;justify-content:space-between;padding:0 12px 0 0;box-sizing:border-box;border-bottom:2px solid #111;background:#FBF9F2">
+    <img src="/_blob/8ada92a0e5c8340ea0afa06a5e8c102f" alt="Jacqueline's Lab" style="height: 85px; width: 159px; display: block; object-fit: cover; object-position: 47.039% 50.3688%; object-view-box: inset(9.0073% 7.223% 8.8754% 6.4154%)">
+    <div style="display:flex;align-items:center;gap:6px">
+      <div style="display:flex;border:2px solid #111;border-radius:999px;overflow:hidden;height:40px">
+        <a href="#" aria-label="Français" style="width:44px;display:flex;align-items:center;justify-content:center;background:#2525DC;color:#FBF9F2;font-family:'League Spartan',sans-serif;font-weight:900;font-size:16px">FR</a>
+        <a href="#" aria-label="English" style="width:44px;display:flex;align-items:center;justify-content:center;font-family:'League Spartan',sans-serif;font-weight:900;font-size:16px">EN</a>
+      </div>
+      <a href="#" aria-label="Panier, 1 article" style="width:44px;height:44px;display:flex;align-items:center;justify-content:center">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 4h2l2.5 11h10l2-8H7"/><circle cx="9" cy="19" r="1.5"/><circle cx="17" cy="19" r="1.5"/></svg>
+      </a>
+      <button type="button" onClick="{{ toggle }}" aria-label="{{ toggleLabel }}" aria-expanded="{{ openStr }}" style="{{ btnStyle }}">
+        <sc-if value="{{open}}" hint-placeholder-val="{{ true }}">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+        </sc-if>
+        <sc-if value="{{closed}}" hint-placeholder-val="{{ false }}">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </sc-if>
+      </button>
+    </div>
+  </div>
+
+  <!-- La page derrière (la page produit, pour le contexte) -->
+  <img src="/_blob/e9e0645d57d49a4aa1517b3ac26fb083" alt="" style="width:390px;height:390px;object-fit:cover;display:block">
+  <div style="padding:14px 16px 0">
+    <div style="font-family:'League Spartan',sans-serif;font-weight:900;font-size:42px;line-height:1;color:#2525DC;text-transform:uppercase">Mobilité</div>
+    <div style="margin-top:6px;font-family:'League Spartan',sans-serif;font-weight:900;font-size:24px;color:#2525DC;text-transform:uppercase">Choisissez votre formule</div>
+  </div>
+
+  <sc-if value="{{open}}" hint-placeholder-val="{{ true }}">
+    <!-- Fond gris : un clic dessus ferme le menu -->
+    <button type="button" onClick="{{ toggle }}" aria-label="Fermer le menu" style="position:absolute;left:0;right:0;top:123px;bottom:0;z-index:1;padding:0;border:0;background:rgba(40,40,40,.55)"></button>
+
+    <!-- La bulle du menu -->
+    <!-- Raccord : prolonge la croix jusqu'à la bulle -->
+    <div aria-hidden="true" style="position:absolute;z-index:4;top:97px;left:334px;width:44px;height:30px;box-sizing:border-box;background:#FBF9F2;border-left:1.5px solid #111;border-right:1.5px solid #111"></div>
+    <nav aria-label="Menu principal" style="position:absolute;z-index:2;top:123px;left:12px;right:12px;padding:16px;box-sizing:border-box;background:#FBF9F2;border:1.5px solid #111;border-radius:20px 0 20px 20px;box-shadow:0 12px 32px rgba(0,0,0,.22)">
+
+      <!-- 1 · Mon compte / Mon panier -->
+      <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px">
+        <a href="#" style="display:flex;align-items:center;justify-content:center;gap:8px;height:52px;background:#fff;border:1.5px solid #111;border-radius:999px;font-family:'Outfit',sans-serif;font-weight:600;font-size:16px">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg>
+          Mon compte
+        </a>
+        <a href="#" aria-label="Mon panier, 1 article" style="position:relative;display:flex;align-items:center;justify-content:center;gap:8px;height:52px;background:#fff;border:1.5px solid #111;border-radius:999px;font-family:'Outfit',sans-serif;font-weight:600;font-size:16px">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 4h2l2.5 11h10l2-8H7"/><circle cx="9" cy="19" r="1.5"/><circle cx="17" cy="19" r="1.5"/></svg>
+          Mon panier
+          <span style="position:absolute;top:-9px;right:-4px;min-width:24px;height:24px;padding:0 6px;box-sizing:border-box;border-radius:99px;background:#2525DC;color:#FBF9F2;border:0;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:800">1</span>
+        </a>
+      </div>
+
+      <!-- 2 · La gamme -->
+      <div style="margin-top:20px;font-family:'League Spartan',sans-serif;font-weight:900;font-size:20px;color:#2525DC;text-transform:uppercase">La gamme</div>
+      <div style="display:flex;flex-direction:column;gap:10px;margin-top:10px">
+        <a href="#" style="display:flex;align-items:center;gap:14px;height:100px;padding:0 14px 0 8px;box-sizing:border-box;background:#fff;border:1px solid #D9D4C7;border-radius:14px">
+          <span style="width:76px;height:84px;flex:none;border-radius:10px;background:#FBD9C7;display:flex;align-items:center;justify-content:center">
+          <img src="/_blob/8038681d5d6870c426152fc19f4453d5" alt="" style="width:52px;height:78px;object-fit:contain;display:block"></span>
+          <span style="flex:1;min-width:0">
+            <span style="display:block;font-family:'League Spartan',sans-serif;font-weight:900;font-size:20px;line-height:1;text-transform:uppercase">Mobilité</span>
+            <span style="display:block;margin-top:4px;font-size:16px;line-height:1.25;color:#3D3D3D">Des articulations plus souples</span>
+          </span>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2525DC" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M9 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#" style="display:flex;align-items:center;gap:14px;height:100px;padding:0 14px 0 8px;box-sizing:border-box;background:#fff;border:1px solid #D9D4C7;border-radius:14px">
+          <span style="width:76px;height:84px;flex:none;border-radius:10px;background:#CFE7D6;display:flex;align-items:center;justify-content:center">
+          <img src="/_blob/4cb9ae81ae6537190cbd8cf756c3f483" alt="" style="width:52px;height:78px;object-fit:contain;display:block"></span>
+          <span style="flex:1;min-width:0">
+            <span style="display:block;font-family:'League Spartan',sans-serif;font-weight:900;font-size:20px;line-height:1;text-transform:uppercase">Digestion</span>
+            <span style="display:block;margin-top:4px;font-size:16px;line-height:1.25;color:#3D3D3D">Pour un ventre en paix</span>
+          </span>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2525DC" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M9 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#" style="display:flex;align-items:center;gap:14px;height:100px;padding:0 14px 0 8px;box-sizing:border-box;background:#fff;border:1px solid #D9D4C7;border-radius:14px">
+          <span style="width:76px;height:84px;flex:none;border-radius:10px;background:#F9E7A8;display:flex;align-items:center;justify-content:center">
+          <img src="/_blob/83816a7f6547cd8ea432929aff61844b" alt="" style="width:52px;height:78px;object-fit:contain;display:block"></span>
+          <span style="flex:1;min-width:0">
+            <span style="display:block;font-family:'League Spartan',sans-serif;font-weight:900;font-size:20px;line-height:1;text-transform:uppercase">Multivitamines</span>
+            <span style="display:block;margin-top:4px;font-size:16px;line-height:1.25;color:#3D3D3D">Soutien 360° au quotidien</span>
+          </span>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2525DC" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M9 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+
+      <!-- 3 · Quiz -->
+      <div style="margin-top:18px;font-size:16px;font-weight:500;color:#3D3D3D;text-align:center">Vous hésitez ? Trouvez son complément en 3 questions.</div>
+      <a href="#" style="display:flex;align-items:center;justify-content:center;height:54px;margin-top:10px;background:#2525DC;color:#FBF9F2;border:0;border-radius:999px;font-family:'League Spartan',sans-serif;font-weight:900;font-size:17px;letter-spacing:.04em;text-transform:uppercase">Faire le quiz</a>
+    </nav>
+  </sc-if>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { open: true };
+  }
+  renderVals() {
+    const open = this.state.open;
+    return {
+      open: open,
+      closed: !open,
+      openStr: open ? 'true' : 'false',
+      toggleLabel: open ? 'Fermer le menu' : 'Ouvrir le menu',
+      btnStyle: 'position:relative;z-index:5;width:44px;height:44px;display:flex;align-items:center;justify-content:center;padding:0;background:#FBF9F2;box-sizing:border-box;border:1.5px solid #111;' + (open ? 'border-bottom:0;border-radius:12px 12px 0 0;' : 'border-radius:12px;'),
+      toggle: () => this.setState({ open: !this.state.open })
+    };
+  }
+}
+</script>
+</body>
+</html>
