@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Panier · 3e offert</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;700;900&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;color:inherit;cursor:pointer}
+</style>
+</helmet>
+<div style="position:relative;width:390px;height:844px;overflow:hidden;background:#FBF9F2;font-family:'Outfit',sans-serif;color:#111;box-sizing:border-box;display:flex;flex-direction:column">
+
+  <!-- En-tête du panier -->
+  <div style="flex:none;height:64px;display:flex;align-items:center;justify-content:space-between;padding:0 12px 0 16px;border-bottom:1px solid #D9D4C7">
+    <h1 style="margin:0;font-family:'League Spartan',sans-serif;font-weight:900;font-size:28px;text-transform:uppercase">Panier <span style="font-size:18px;font-weight:700;color:#3D3D3D">({{ count }})</span></h1>
+    <a href="#" aria-label="Fermer le panier" style="width:44px;height:44px;display:flex;align-items:center;justify-content:center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></a>
+  </div>
+
+  <!-- Contenu qui défile -->
+  <div style="flex:1;overflow-y:auto;padding:0 16px">
+
+    <!-- Message + jauge de l'offre -->
+    <div style="padding:16px 0;border-bottom:1px solid #E6E2D6">
+      <div style="font-size:18px;font-weight:700">{{ offerTitle }}</div>
+      <div style="margin-top:2px;font-size:16px;color:#3D3D3D">{{ offerSub }}</div>
+      <div style="position:relative;height:28px;margin:14px 6px 0">
+        <div style="position:absolute;left:0;right:0;top:12px;height:4px;border-radius:4px;background:#E6E2D6"></div>
+        <div style="{{ barStyle }}"></div>
+        <span style="position:absolute;left:50%;top:2px;margin-left:-12px;width:24px;height:24px;border-radius:99px;background:#2525DC;display:flex;align-items:center;justify-content:center"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#FBF9F2" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg></span>
+        <span style="{{ endDot }}"><sc-if value="{{ two }}" hint-placeholder-val="{{ false }}"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#FBF9F2" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg></sc-if></span>
+      </div>
+      <div style="display:flex;justify-content:space-between;margin-top:6px;font-size:16px">
+        <span style="margin-left:calc(50% - 60px);width:120px;text-align:center"><b style="color:#2525DC">1 sachet</b><br><span style="color:#3D3D3D">{{ step1 }}</span></span>
+        <span style="text-align:right"><b>2 sachets</b><br><span style="color:#3D3D3D">3e offert</span></span>
+      </div>
+    </div>
+
+    <!-- Ligne Mobilité -->
+    <div style="padding:16px 0;border-bottom:1px solid #E6E2D6">
+      <div style="display:flex;gap:12px">
+        <span style="width:72px;height:84px;flex:none;border-radius:10px;background:#FBD9C7;display:flex;align-items:center;justify-content:center"><img src="/_blob/8038681d5d6870c426152fc19f4453d5" alt="" style="width:48px;height:72px;object-fit:contain;display:block"></span>
+        <div style="flex:1;min-width:0">
+          <div style="display:flex;justify-content:space-between;gap:8px">
+            <span style="font-size:18px;font-weight:700">Mobilité</span>
+            <span style="text-align:right;line-height:1.15"><sc-if value="{{ mobStrike }}" hint-placeholder-val="{{ true }}"><span style="display:block;font-size:16px;color:#6B6458;text-decoration:line-through">38,40 €</span></sc-if><span style="font-family:'League Spartan',sans-serif;font-weight:900;font-size:22px">{{ mobLine }}</span></span>
+          </div>
+          <div style="font-size:16px;color:#3D3D3D">Soutien articulaire · {{ gout }}</div>
+          <sc-if value="{{ mobPromo }}" hint-placeholder-val="{{ true }}"><div style="font-size:16px;color:#2525DC">Black Friday −20 %</div></sc-if>
+          <div style="display:flex;align-items:center;gap:14px;margin-top:8px">
+              <span style="display:flex;align-items:center;height:40px;border:1px solid #D9D4C7;border-radius:999px;background:#fff">
+                <button type="button" aria-label="Retirer un sachet" style="width:40px;height:40px;border:0;background:none;font-size:20px;padding:0">−</button>
+                <span style="min-width:20px;text-align:center;font-size:16px;font-weight:600">1</span>
+                <button type="button" aria-label="Ajouter un sachet" style="width:40px;height:40px;border:0;background:none;font-size:20px;padding:0">+</button>
+              </span>
+              <button type="button" onClick="{{ noop }}" style="border:0;background:none;padding:0;font-size:16px;color:#3D3D3D;text-decoration:underline">Supprimer</button>
+            </div>
+        </div>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin-top:12px">
+          <button type="button" onClick="{{ mobOnce }}" style="{{ mobOnceStyle }}"><span style="{{ mobOnceDot }}"></span><span style="flex:1;text-align:left">Achat unique</span><span style="font-weight:700">{{ mobOncePrice }}</span></button>
+          <button type="button" onClick="{{ mobAbo }}" style="{{ mobAboStyle }}"><span style="{{ mobAboDot }}"></span><span style="flex:1;text-align:left">Abonnement</span><span style="font-weight:700">{{ mobAboPrice }}</span></button>
+        </div>
+    </div>
+
+    <sc-if value="{{ two }}" hint-placeholder-val="{{ false }}">
+      <!-- Ligne Digestion -->
+      <div style="padding:16px 0;border-bottom:1px solid #E6E2D6">
+        <div style="display:flex;gap:12px">
+          <span style="width:72px;height:84px;flex:none;border-radius:10px;background:#CFE7D6;display:flex;align-items:center;justify-content:center"><img src="/_blob/4cb9ae81ae6537190cbd8cf756c3f483" alt="" style="width:48px;height:72px;object-fit:contain;display:block"></span>
+          <div style="flex:1;min-width:0">
+            <div style="display:flex;justify-content:space-between;gap:8px">
+              <span style="font-size:18px;font-weight:700">Digestion</span>
+              <span style="font-family:'League Spartan',sans-serif;font-weight:900;font-size:22px">{{ digLine }}</span>
+            </div>
+            <div style="font-size:16px;color:#3D3D3D">Soutien digestif · {{ gout }}</div>
+            <div style="display:flex;align-items:center;gap:14px;margin-top:8px">
+              <span style="display:flex;align-items:center;height:40px;border:1px solid #D9D4C7;border-radius:999px;background:#fff">
+                <button type="button" aria-label="Retirer un sachet" style="width:40px;height:40px;border:0;background:none;font-size:20px;padding:0">−</button>
+                <span style="min-width:20px;text-align:center;font-size:16px;font-weight:600">1</span>
+                <button type="button" aria-label="Ajouter un sachet" style="width:40px;height:40px;border:0;background:none;font-size:20px;padding:0">+</button>
+              </span>
+              <button type="button" onClick="{{ remove }}" style="border:0;background:none;padding:0;font-size:16px;color:#3D3D3D;text-decoration:underline">Supprimer</button>
+            </div>
+          </div>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin-top:12px">
+          <button type="button" onClick="{{ digOnce }}" style="{{ digOnceStyle }}"><span style="{{ digOnceDot }}"></span><span style="flex:1;text-align:left">Achat unique</span><span style="font-weight:700">{{ digOncePrice }}</span></button>
+          <button type="button" onClick="{{ digAbo }}" style="{{ digAboStyle }}"><span style="{{ digAboDot }}"></span><span style="flex:1;text-align:left">Abonnement</span><span style="font-weight:700">{{ digAboPrice }}</span></button>
+        </div>
+      </div>
+      <!-- Ligne Multivitamines offerte -->
+      <div style="display:flex;gap:12px;padding:16px 0;border-bottom:1px solid #E6E2D6">
+        <span style="width:72px;height:84px;flex:none;border-radius:10px;background:#F9E7A8;display:flex;align-items:center;justify-content:center"><img src="/_blob/83816a7f6547cd8ea432929aff61844b" alt="" style="width:48px;height:72px;object-fit:contain;display:block"></span>
+        <div style="flex:1;min-width:0">
+          <div style="display:flex;justify-content:space-between;gap:8px">
+            <span style="font-size:18px;font-weight:700">Multivitamines</span>
+            <span style="text-align:right;line-height:1.15"><span style="display:block;font-size:16px;color:#6B6458;text-decoration:line-through">35,90 €</span><span style="font-family:'League Spartan',sans-serif;font-weight:900;font-size:22px;color:#2525DC">Offert</span></span>
+          </div>
+          <div style="font-size:16px;color:#3D3D3D">Soutien 360° · sachet offert</div>
+          <a href="#" style="display:inline-block;margin-top:6px;font-size:16px;font-weight:600;color:#2525DC;text-decoration:underline">Changer de sachet offert</a>
+        </div>
+      </div>
+    </sc-if>
+
+    <sc-if value="{{ one }}" hint-placeholder-val="{{ true }}">
+      <!-- Suggestions -->
+      <div style="padding-top:18px;font-size:16px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#3D3D3D">Ajoutez un sachet, le 3e est offert</div>
+      <div style="margin-top:6px">
+        <div style="display:flex;align-items:center;gap:12px;padding:14px 0;border-top:1px solid #E6E2D6">
+          <span style="width:72px;height:84px;flex:none;border-radius:10px;background:#CFE7D6;display:flex;align-items:center;justify-content:center"><img src="/_blob/4cb9ae81ae6537190cbd8cf756c3f483" alt="" style="width:48px;height:72px;object-fit:contain;display:block"></span>
+          <div style="flex:1;min-width:0">
+            <div style="font-size:18px;font-weight:700">Digestion</div>
+            <div style="font-size:16px;color:#3D3D3D">Soutien digestif · 37,70 €</div>
+            <div style="margin-top:2px;font-size:16px;color:#2525DC">3 sachets pour 76,10 €, soit 25,37 € le sachet</div>
+          </div>
+          <button type="button" onClick="{{ add }}" style="flex:none;height:44px;padding:0 14px;border:1.5px solid #111;border-radius:999px;background:#fff;font-size:16px;font-weight:600">+ Ajouter</button>
+        </div>
+        <div style="display:flex;align-items:center;gap:12px;padding:14px 0;border-top:1px solid #E6E2D6">
+          <span style="width:72px;height:84px;flex:none;border-radius:10px;background:#F9E7A8;display:flex;align-items:center;justify-content:center"><img src="/_blob/83816a7f6547cd8ea432929aff61844b" alt="" style="width:48px;height:72px;object-fit:contain;display:block"></span>
+          <div style="flex:1;min-width:0">
+            <div style="font-size:18px;font-weight:700">Multivitamines</div>
+            <div style="font-size:16px;color:#3D3D3D">Soutien 360° · 35,90 €</div>
+            <div style="margin-top:2px;font-size:16px;color:#2525DC">3 sachets pour 76,10 €, soit 25,37 € le sachet</div>
+          </div>
+          <button type="button" onClick="{{ add }}" style="flex:none;height:44px;padding:0 14px;border:1.5px solid #111;border-radius:999px;background:#fff;font-size:16px;font-weight:600">+ Ajouter</button>
+        </div>
+      </div>
+    </sc-if>
+
+    <!-- Récapitulatif -->
+    <div style="padding:16px 0 20px;border-top:1px solid #E6E2D6;font-size:16px;display:flex;flex-direction:column;gap:8px">
+      <div style="display:flex;justify-content:space-between"><span>Sous-total ({{ count }} {{ sachetsWord }})</span><span>{{ subtotal }}</span></div>
+      <sc-if value="{{ hasDiscount }}" hint-placeholder-val="{{ true }}"><div style="display:flex;justify-content:space-between;color:#2525DC"><span>{{ discountLabel }}</span><span>{{ discount }}</span></div></sc-if>
+      <div style="display:flex;justify-content:space-between"><span>Livraison point relais</span><span>{{ shipping }}</span></div>
+    </div>
+  </div>
+
+  <!-- Pied fixe : paiement -->
+  <div style="flex:none;padding:12px 16px 14px;border-top:1px solid #D9D4C7;background:#FBF9F2">
+    <div style="text-align:center;font-size:16px;color:#3D3D3D">{{ shipNote }}</div>
+    <a href="#" style="display:flex;align-items:center;justify-content:center;gap:10px;height:56px;margin-top:10px;background:#2525DC;color:#FBF9F2;border-radius:999px;font-family:'League Spartan',sans-serif;font-weight:900;font-size:20px;letter-spacing:.04em;text-transform:uppercase">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FBF9F2" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>
+      Payer · {{ total }}
+    </a>
+    <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:4px 12px;margin-top:10px;font-size:16px;color:#3D3D3D"><span>★★★★★ 4,8/5 Trustpilot</span><span>Remboursé 60 j</span><span>Paiement sécurisé</span></div>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { n: 2, mob: 'once', dig: 'once' };
+  }
+  fmt(v) { return v.toFixed(2).replace('.', ',') + ' €'; }
+  renderVals() {
+    const n = this.state.n, mob = this.state.mob, dig = this.state.dig;
+    const P = { mobOnce: 38.40, mobAbo: 32.64, digOnce: 37.70, digAbo: 32.04, mul: 35.90 };
+    const bf = 0.20, ship = 3.90;
+    const chip = 'display:flex;align-items:center;gap:8px;height:48px;padding:0 10px;border-radius:10px;background:#fff;font-size:16px;text-align:left;';
+    const on = chip + 'border:1.5px solid #111;';
+    const off = chip + 'border:1px solid #D9D4C7;color:#3D3D3D;';
+    const dOn = 'width:16px;height:16px;flex:none;border-radius:99px;box-sizing:border-box;border:5px solid #111;background:#fff;';
+    const dOff = 'width:16px;height:16px;flex:none;border-radius:99px;box-sizing:border-box;border:1.5px solid #9A9488;background:#fff;';
+    const mobOnceShown = n === 1 ? P.mobOnce * (1 - bf) : P.mobOnce;
+    const mobLine = mob === 'once' ? mobOnceShown : P.mobAbo;
+    const digLine = dig === 'once' ? P.digOnce : P.digAbo;
+    let subtotal, discount = 0, discountLabel = '', shipping, total;
+    if (n === 1) {
+      subtotal = mob === 'once' ? P.mobOnce : P.mobAbo;
+      if (mob === 'once') { discount = P.mobOnce * bf; discountLabel = 'Black Friday −20 %'; }
+      shipping = mob === 'abo' ? 0 : ship;
+    } else {
+      subtotal = mobLine + digLine + P.mul;
+      discount = P.mul; discountLabel = '3e sachet offert';
+      shipping = 0;
+    }
+    total = subtotal - discount + shipping;
+    return {
+      one: n === 1, two: n === 2, count: n === 1 ? 1 : 3, sachetsWord: n === 1 ? 'sachet' : 'sachets',
+      gout: 'goût viande',
+      offerTitle: n === 1 ? 'Ajoutez un 2e sachet : le 3e est offert' : 'Votre 3e sachet est offert',
+      offerSub: n === 1 ? '3 sachets pour 76,10 € au lieu de 112,00 €, soit environ −33 %' : 'Vous payez 2 sachets sur 3 : 35,90 € d’économie',
+      step1: n === 1 ? '−20 % Black Friday' : '',
+      barStyle: 'position:absolute;left:0;top:12px;height:4px;border-radius:4px;background:#2525DC;width:' + (n === 1 ? '50%' : '100%') + ';',
+      endDot: 'position:absolute;right:-12px;top:2px;width:24px;height:24px;border-radius:99px;box-sizing:border-box;display:flex;align-items:center;justify-content:center;' + (n === 2 ? 'background:#2525DC;' : 'background:#FBF9F2;border:2px solid #9A9488;'),
+      mobStrike: n === 1 && mob === 'once', mobPromo: n === 1 && mob === 'once',
+      mobLine: this.fmt(mobLine), digLine: this.fmt(digLine),
+      mobOncePrice: this.fmt(mobOnceShown), mobAboPrice: this.fmt(P.mobAbo),
+      digOncePrice: this.fmt(P.digOnce), digAboPrice: this.fmt(P.digAbo),
+      mobOnceStyle: mob === 'once' ? on : off, mobAboStyle: mob === 'abo' ? on : off,
+      mobOnceDot: mob === 'once' ? dOn : dOff, mobAboDot: mob === 'abo' ? dOn : dOff,
+      digOnceStyle: dig === 'once' ? on : off, digAboStyle: dig === 'abo' ? on : off,
+      digOnceDot: dig === 'once' ? dOn : dOff, digAboDot: dig === 'abo' ? dOn : dOff,
+      mobOnce: () => this.setState({ mob: 'once' }), mobAbo: () => this.setState({ mob: 'abo' }),
+      digOnce: () => this.setState({ dig: 'once' }), digAbo: () => this.setState({ dig: 'abo' }),
+      add: () => this.setState({ n: 2 }), remove: () => this.setState({ n: 1 }), noop: () => {},
+      subtotal: this.fmt(subtotal), hasDiscount: discount > 0, discountLabel: discountLabel, discount: '−' + this.fmt(discount),
+      shipping: shipping === 0 ? 'Offerte' : this.fmt(shipping),
+      shipNote: n === 1 && mob === 'once' ? 'Livraison point relais offerte dès 2 sachets' : 'Livraison point relais offerte',
+      total: this.fmt(total)
+    };
+  }
+}
+</script>
+</body>
+</html>

@@ -38,7 +38,7 @@ Ne copie pas leur style : on reste dans la direction artistique Jacqueline's Lab
 ## 1. Contenu de la bulle, dans l'ordre
 
 ### 1. Mon compte / Mon panier
-Deux boutons pilule côte à côte, blancs, bordure de 2,5 px, ombre `3px 4px #111`, 52 px de haut, texte League Spartan 800 de 16 px en majuscules.
+Deux boutons pilule côte à côte, blancs, 52 px de haut (style détaillé à la section 2).
 - **« Mon compte »** avec une icône de bonhomme (contour). Lien vers `/account`, qui renvoie sur la connexion si le client n'est pas connecté.
 - **« Mon panier »** avec une icône de panier et une **pastille orange** donnant le nombre d'articles (`cart.item_count`), masquée si le panier est vide. Lien vers `/cart`, ou ouverture du tiroir panier si le thème en a un.
 
@@ -52,12 +52,12 @@ Deux boutons pilule côte à côte, blancs, bordure de 2,5 px, ombre `3px 4px #1
 | Digestion | `#CFE7D6` (vert pâle) | `pack-digestion.webp` | Pour un ventre en paix |
 | Multivitamines | `#F9E7A8` (jaune pâle) | `pack-multi.webp` | Soutien 360° au quotidien |
 
-- Chaque carte : 104 px de haut, sachet à gauche (environ 62 × 92 px, `object-fit: contain`), nom en League Spartan 900 de 22 px en majuscules, sous-titre de 16 px, chevron « › » à droite. Bordure de 2,5 px, arrondi de 16 px, ombre `3px 4px #111`.
+- Chaque carte : 100 px de haut, sachet à gauche sur un carré de couleur de 76 × 84 px, nom en League Spartan 900 de 20 px en majuscules, sous-titre de 16 px, chevron « › » à droite. Style détaillé à la section 2.
 - **Ne code pas la liste en dur** : construis-la depuis un **menu Shopify** (Navigation › un menu « Gamme ») ou une **collection**. Le visuel et le sous-titre viennent d'un metafield produit (`jl.menu_sous_titre`) ou des réglages de la section. Un 4e produit doit pouvoir s'ajouter sans toucher au code.
 
 ### 3. Quiz
 - Phrase centrée en 16 px : « Vous hésitez ? Trouvez son complément en 3 questions. »
-- Bouton cobalt pleine largeur « FAIRE LE QUIZ », 54 px de haut, ombre `5px 6px #111`.
+- Bouton cobalt pleine largeur « FAIRE LE QUIZ », 54 px de haut.
 - Il mène au **quiz déjà en place sur le site** : retrouve son URL, ne le recode pas.
 
 ### Ce qui disparaît du menu
@@ -82,7 +82,11 @@ Deux boutons pilule côte à côte, blancs, bordure de 2,5 px, ombre `3px 4px #1
   - la croix et la bulle forment ainsi **un seul objet**, comme un onglet ;
   - la bulle commence juste sous l'en-tête, son coin haut droit n'est pas arrondi (`border-radius: 22px 0 22px 22px`) et son bord droit est aligné avec celui de la croix ;
   - voir `maquette/menu-mobile.dc.html`, élément « Raccord ».
-- Bulle : à 12 px des bords gauche et droit. Fond crème `#FBF9F2`, bordure de 2,5 px en `#111`, ombre dure `5px 6px #111`, marges intérieures de 16 px.
+- **Style sobre, comme le panier** (et non le néo-brutalisme de la page produit) : traits fins, pas d'ombre dure décalée.
+- Bulle : à 12 px des bords gauche et droit. Fond crème `#FBF9F2` (le beige du site, pas de blanc), bordure de 1,5 px en `#111`, ombre douce `0 12px 32px rgba(0,0,0,.22)`, marges intérieures de 16 px. La croix et son raccord ont la même bordure de 1,5 px.
+- Boutons « Mon compte » et « Mon panier » : fond blanc, bordure de 1,5 px, Outfit 600 de 16 px, sans ombre. La pastille du panier est cobalt avec un chiffre crème.
+- Cartes produit : fond blanc, bordure de 1 px `#D9D4C7`, arrondi de 14 px, sans ombre. Le sachet est posé sur un carré arrondi aux couleurs du produit, sous-titre en `#3D3D3D`, chevron cobalt.
+- Bouton « Faire le quiz » : cobalt plein, sans bordure ni ombre.
 - **La bulle ne prend pas toute la page.** Si l'écran est trop petit, c'est la bulle qui défile (`max-height` avec `overflow-y: auto`), pas la page.
 
 **Comportement :**
