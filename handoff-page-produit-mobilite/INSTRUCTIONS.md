@@ -79,6 +79,8 @@ Le même gabarit servira ensuite pour **Digestion** et **Multivitamines**. Donc 
 - **Outfit** 400 à 700 : texte courant ;
 - **Permanent Marker** : uniquement les doses des actifs.
 
+**Ton du site : vouvoiement partout.** Tous les textes visibles par le client vouvoient : boutons, messages d'erreur, panier, e-mails de commande, quiz existant. Seule exception, ces instructions, qui tutoient Dora. Si une partie déjà en place (quiz, app d'abonnement, e-mails Shopify ou Klaviyo) tutoie encore, signale-le à Dora au lieu de laisser deux tons sur le même parcours.
+
 **Tailles de texte, validées par Dora (à respecter strictement) :**
 - **texte courant : 18 px** ;
 - **petits textes, légendes, pastilles : 16 px minimum**, rien en dessous ;
@@ -127,7 +129,7 @@ Texte modifiable (section 3). Valeur actuelle : « Black Friday · 3e sachet off
 
 ### 4.5 Nom et accroche du bloc d'achat
 - « MOBILITÉ » : 42 px, cobalt, League Spartan 900.
-- Juste dessous : « CHOISIS TA FORMULE ».
+- Juste dessous : « CHOISISSEZ VOTRE FORMULE ».
 
 ### 4.6 Bloc d'achat (le plus important, voir aussi la section 5)
 - **2 bulles l'une sous l'autre : « Abonnement » (badge « Recommandé ») et « Achat unique ».**
@@ -150,7 +152,7 @@ Texte modifiable (section 3). Valeur actuelle : « Black Friday · 3e sachet off
 - 3 pastilles orange pâle : « 1-10 kg · 1 / jour », « 11-30 kg · 2 / jour », « +30 kg · 3 / jour ». Elles viennent du metafield.
 
 ### 4.9 Ils l'ont testé (défilé latéral)
-- Titre « ILS L'ONT TESTÉ. » + « Glisse → ».
+- Titre « ILS L'ONT TESTÉ. » + « Faites glisser → ».
 - Cartes d'avis de 290 px de large ; la suivante doit **dépasser** à droite.
 - Les avis viennent de Trustpilot (vrais avis uniquement).
 - Bouton « Lire tous les avis ».
@@ -190,10 +192,10 @@ Texte modifiable (section 3). Valeur actuelle : « Black Friday · 3e sachet off
 | Rien d'utile en plus | 6 actifs dosés |
 | À l'occasion | Chaque jour |
 
-- Phrase en dessous : « Tu lui donnes déjà une friandise ? Remplace-la par son soft chew. »
+- Phrase en dessous : « Vous lui donnez déjà une friandise ? Remplacez-la par son soft chew. »
 
 ### 4.13 Sur le terrain (défilé latéral)
-- « SUR LE TERRAIN, CHIEN APRÈS CHIEN. » + « On part à la rencontre des chiens et de leurs maîtres, partout en France. »
+- « SUR LE TERRAIN, CHIEN APRÈS CHIEN. » + « Nous partons à la rencontre des chiens et de leurs maîtres, partout en France. »
 - Défilé de photos d'événements, chacune avec une légende.
   - Photo 1 : `event-corgi.webp`, légende « Journée Corgi · Paris ».
   - Les autres photos et légendes sont à fournir par Dora.
@@ -205,11 +207,11 @@ Texte modifiable (section 3). Valeur actuelle : « Black Friday · 3e sachet off
 
 ### 4.15 Son rituel de tous les jours
 Frise verticale en 3 étapes :
-1. « Jours 1 à 10 · La mise en route · Ton chien adopte son rituel. »
+1. « Jours 1 à 10 · La mise en route · Votre chien adopte son rituel. »
 2. « Dès 1 mois · La routine ancrée · Le geste devient automatique. »
 3. « 3 mois · Le bilan · Cure de 3 mois minimum, idéalement en continu. » (étape en orange)
 
-### 4.16 Tes questions (FAQ en accordéon)
+### 4.16 Vos questions (FAQ en accordéon)
 - Combien par jour ? : « 1 de 1 à 10 kg, 2 de 11 à 30 kg, 3 au-delà. Un sachet contient 60 soft chews. »
 - Et si ça ne lui plaît pas ? : « Satisfait ou remboursé 60 jours, sans formulaire. »
 - Livraison et retours : texte de livraison venant du réglage commun (section 3).
@@ -221,12 +223,12 @@ Utilise `<details>` / `<summary>` et ajoute le **balisage FAQPage** (schema.org)
 
 ### 4.17 Zéro image IA. Que des vrais chiens. (défilé latéral, fond jaune pâle)
 - Sous-titre « Ils goûtent leurs chews, en vrai, sur nos stands. »
-- Compteur « 1 / 3 » **qui se met à jour** pendant le défilement, + « Glisse → ».
+- Compteur « 1 / 3 » **qui se met à jour** pendant le défilement, + « Faites glisser → ».
 - 3 cartes **photo seule** de 250 × 397 px, dans cet ordre : `chien-bouvier.webp`, `chien-dalmatien.webp`, `chien-epagneul.webp`.
 - **Pas de légende ni de prénom** : la photo occupe toute la carte. Garde un `alt` descriptif pour l'accessibilité (voir la maquette).
 
 ### 4.18 Quiz (fond cobalt, tout en bas)
-- « PAS SÛR QUE CE SOIT LE BON CHOIX POUR TON CHIEN ? » + « 3 questions, et on t'envoie vers le complément qu'il lui faut. »
+- « PAS SÛR QUE CE SOIT LE BON CHOIX POUR VOTRE CHIEN ? » + « 3 questions, et nous vous orientons vers le complément qu'il lui faut. »
 - Question 1 : « Qu'est-ce qui compte le plus pour lui en ce moment ? » Réponses, chacune avec une pastille de couleur :
   - « Ses articulations, il ralentit » → Mobilité
   - « Son ventre, sa digestion » → Digestion
@@ -244,12 +246,12 @@ Utilise `<details>` / `<summary>` et ajoute le **balisage FAQPage** (schema.org)
    - elle s'ouvre avec une animation courte (moins de 200 ms, désactivée si `prefers-reduced-motion`) ;
    - l'autre bulle se ferme.
 3. **Dans la bulle ouverte :**
-   1. « 1 · POIDS DE TON CHIEN » : 3 boutons « 1–10 kg », « 11–30 kg », « + de 30 kg », aucun présélectionné.
-      - Avant le choix, la ligne d'info affiche « Choisis son poids : on calcule sa dose. »
+   1. « 1 · POIDS DE VOTRE CHIEN » : 3 boutons « 1–10 kg », « 11–30 kg », « + de 30 kg », aucun présélectionné.
+      - Avant le choix, la ligne d'info affiche « Choisissez son poids : nous calculons sa dose. »
       - Après le choix : « 2 soft chews par jour · un sachet de 60 dure environ 1 mois · soit X,XX € par jour », calculé avec le **prix réel** de l'option.
-   2. « 2 · LE PRÉNOM DE TON CHIEN » : champ texte, exemple « Ex. Nestor ». Envoie-le comme **propriété de ligne de commande** : `properties[Prénom du chien]`. Le poids choisi part aussi en propriété (`properties[Poids]`).
+   2. « 2 · LE PRÉNOM DE VOTRE CHIEN » : champ texte, exemple « Ex. Nestor ». Envoie-le comme **propriété de ligne de commande** : `properties[Prénom du chien]`. Le poids choisi part aussi en propriété (`properties[Poids]`).
    3. Bouton d'achat :
-      - grisé avec « CHOISIS SON POIDS » tant qu'aucun poids n'est choisi ;
+      - grisé avec « CHOISISSEZ SON POIDS » tant qu'aucun poids n'est choisi ;
       - puis cobalt avec « ACHETER · [prix] € ».
       - En abonnement, il envoie le bon `selling_plan`.
    4. En dessous : « Cure de 3 mois recommandée, idéalement en continu. », « Satisfait ou remboursé », et la ligne de livraison commune.
@@ -345,7 +347,7 @@ Importe-les dans Shopify (Contenu › Fichiers) et référence-les dans les rég
 
 - [ ] Plateforme, thème et app d'abonnement vérifiés, et confirmés à Dora.
 - [ ] Travail sur une copie du thème, rien de publié en ligne.
-- [ ] Ordre des blocs = section 4, textes identiques à la maquette.
+- [ ] Ordre des blocs = section 4, textes identiques à la maquette, tout au vouvoiement.
 - [ ] Texte à 18 px, rien sous 16 px, champs à 16 px minimum.
 - [ ] Aucun prix ni pourcentage écrit en dur.
 - [ ] Bloc d'achat : rien de présélectionné, la bulle s'ouvre, poids + prénom, bouton grisé tant qu'aucun poids n'est choisi, propriétés envoyées au panier, `selling_plan` correct.
